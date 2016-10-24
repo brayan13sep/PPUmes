@@ -1,3 +1,35 @@
+<?php 
+  require '../DataBase/db.class.php';
+  require '../DataBase/Conf.class.php';
+  $db=Db::getInstance();
+
+  session_start();
+   
+   if($_SERVER["REQUEST_METHOD"] == "POST") {
+      // usuario and password sent from form 
+      
+      $myusuario = $_POST['usuario'];
+      $mypassword = $_POST['password']; 
+      
+      $sql = "SELECT id FROM usuario WHERE usuario = '$myusuario' and password = '$mypassword'";
+      $result =$db->ejecutar($sql);
+      
+      $count = mysql_num_rows($result);
+      
+      // If result matched $myusuario and $mypassword, table row must be 1 row
+    
+      if($count == 1) {
+        //session_register($myusuario);
+        //session_register("myusuario");
+         $_SESSION['login_user'] = $myusuario;
+         
+         header("location: madre.php");
+      }else {
+         $error = "Your Login Name or Password is invalid";
+      }
+   }
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
