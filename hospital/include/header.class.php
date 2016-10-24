@@ -15,7 +15,7 @@ class ClassName
     
   }
 }
-require '../DataBase/session.php';
+include '../DataBase/session.php';
  ?>
 
  <div class="header clearfix">

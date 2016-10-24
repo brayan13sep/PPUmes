@@ -2,6 +2,7 @@
 <?php 
   require '../DataBase/db.class.php';
   require '../DataBase/Conf.class.php';
+  
   $db=Db::getInstance();
  ?>
 <html lang="en">

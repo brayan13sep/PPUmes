@@ -106,7 +106,7 @@
                 </form>
                 <div class="form-group">
                <div class="col-lg-3">
-              <button class="btn btn-xl btn-link btn-block" onclick=" location.href='{{ url('/hospital/public') }}'" type="submit">Regresar</button>
+              <button class="btn btn-xl btn-link btn-block" onclick=" location.href='index.html'" type="submit">Regresar</button>
               </div>
              </div>
                 
