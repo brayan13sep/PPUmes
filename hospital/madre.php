@@ -50,7 +50,7 @@
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de documento:</font></font></label></td>
               <td><select name="TipoDocumento" class="form-control"><option>Seleccione</option>
                 <?php
-                  $sql='SELECT id,descripcion FROM tipodocumento'; 
+                  $sql='SELECT id,descripcion FROM tipo_documento'; 
                   $stmt=$db->ejecutar($sql); 
                   while ($x=$db->obtener_fila($stmt,0)){
                     echo '<option value="'.$x['id'].'">'.$x['descripcion'].'</option>';
@@ -85,7 +85,7 @@
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Estado civil:</font></label></td>
               <td colspan="5"><select name="estado_civil" class="form-control"><option>Seleccione</option>
               <?php
-                  $sql='SELECT id,descripcion FROM estadocivil'; 
+                  $sql='SELECT id,descripcion FROM estado_civil'; 
                   $stmt=$db->ejecutar($sql); 
                   while ($x=$db->obtener_fila($stmt,0)){
                     echo '<option value="'.$x['id'].'">'.$x['descripcion'].'</option>';
@@ -106,7 +106,7 @@
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Nivel educativo:</font></font></label></td>
               <td colspan="3"><select name="nivel_educativo" class="form-control"><option>Seleccione</option>
                 <?php
-                  $sql='SELECT id,descripcion FROM niveleducativo'; 
+                  $sql='SELECT id,descripcion FROM nivel_educativo'; 
                   $stmt=$db->ejecutar($sql); 
                   while ($x=$db->obtener_fila($stmt,0)){
                     echo '<option value="'.$x['id'].'">'.$x['descripcion'].'</option>';
