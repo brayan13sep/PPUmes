@@ -1,34 +1,34 @@
-<?php 
-  require '../DataBase/db.class.php';
-  require '../DataBase/Conf.class.php';
-  $db=Db::getInstance();
+<?php
+require '../DataBase/db.class.php';
+require '../DataBase/Conf.class.php';
+$db = Db::getInstance();
 
-  session_start();
-   
-   if($_SERVER["REQUEST_METHOD"] == "POST") {
-      // usuario and password sent from form 
-      
-      $myusuario = $_POST['usuario'];
-      $mypassword = $_POST['password']; 
-      
-      $sql = "SELECT id FROM usuario WHERE usuario = '$myusuario' and password = '$mypassword'";
-      $result =$db->ejecutar($sql);
-      
-      $count = mysql_num_rows($result);
-      
-      // If result matched $myusuario and $mypassword, table row must be 1 row
-    
-      if($count == 1) {
+session_start();
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // usuario and password sent from form
+
+    $myusuario  = $_POST['usuario'];
+    $mypassword = $_POST['password'];
+
+    $sql    = "SELECT id FROM usuario WHERE usuario = '$myusuario' and password = '$mypassword'";
+    $result = $db->ejecutar($sql);
+
+    $count = mysql_num_rows($result);
+
+    // If result matched $myusuario and $mypassword, table row must be 1 row
+
+    if ($count == 1) {
         //session_register($myusuario);
         //session_register("myusuario");
-         $_SESSION['login_user'] = $myusuario;
-         
-         header("location: madre.php");
-      }else {
-         $error = "Your Login Name or Password is invalid";
-      }
-   }
- ?>
+        $_SESSION['login_user'] = $myusuario;
+
+        header("location: madre.php");
+    } else {
+        $error = "Your Login Name or Password is invalid";
+    }
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -58,14 +58,61 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 
-    <!-- Custom styles for this template -->
-    <link href="../docs/examples/carousel/carousel.css" rel="stylesheet">
   </head>
 
   <body>
+<div class="container" style="margin-top:100px;"></div>
+<div class="col-md-3" ></div>
+  <div class="container">
+    <div class="row">
+        <div class="col-md-8" >
+            <div class="well well-sm">
+                <form class="form-horizontal" method="POST" action="">
+                    <fieldset>
+                        <legend class="text-center header"> <h2> Inicio De  Session </h2></legend>
 
- <div class="container ">
+                        <div class="form-group">
+                         <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon" style="font-size:36px" ></i></span>
+                            <div class="col-md-8">
+                                <input id="inputUser" name="usuario" type="text" placeholder="Usuario" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center">
+                            <i  class="fa fa-key" style="font-size:36px" ></i></span>
+                            <div class="col-md-8">
+                                <input  type="password" name="password" id="inputPassword" placeholder="password " class="form-control" required>
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center">
+                            <i   class="fa fa-lightbulb-o" style="font-size:36px" ></i></span>
+                            <div class="col-md-8">
+                                <input id="lname" type="checkbox" value="remember"> Recordarme
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12 text-center">
+                                <button type="" class="btn btn-info "> <i class="fa fa-check" aria-hidden="true"></i>  Ingresar</button>
+                                <button type="reset"  class="btn btn-danger"><i class="fa fa-refresh" aria-hidden="true"></i> Limpiar</button>
+                                <button type="button" onclick=" location.href='index.html'" class="btn btn-primary"> <span class="glyphicon glyphicon-home" aria-hidden="true"> </span>  Inicio</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+      </div>
+<!--  <div class="container ">
   <center>
 <div class="col-md-3" ></div>
 <div class="col-md-6" >
@@ -75,14 +122,14 @@
   </div>
   <div class="panel-body">
     <form class="form-signin" method="POST" action="">
-      
+
         <h2 class="form-signin-heading">Iniciar sesion</h2>
-         
+
         <div class="form-group">
          <div class="col-lg-16">
-            
+
         <input type="text" name="usuario" id="inputUser" class="form-control" placeholder="Usuario" required autofocus>
-        
+
         </div>
         </div>
 
@@ -101,7 +148,7 @@
         </div>
         </div>
         </div>
-       
+
            <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
                 </form>
                 <div class="form-group">
@@ -109,13 +156,13 @@
               <button class="btn btn-xl btn-link btn-block" onclick=" location.href='index.html'" type="submit">Regresar</button>
               </div>
              </div>
-                
+
       </div>
   </div>
 
 </div>
 
-    </div> <!-- /container -->
+    </div> /container -->
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 
@@ -127,7 +174,7 @@
     <script src="../docs/assets/js/vendor/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../docs/assets/js/ie10-viewport-bug-workaround.js"></script>
-    
+
   </body>
 </html>
  <!--
