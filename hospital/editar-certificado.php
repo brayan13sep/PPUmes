@@ -1,3 +1,11 @@
+<?php
+ 
+require '../DataBase/db.class.php';
+  require '../DataBase/Conf.class.php';
+  $db=Db::getInstance();
+  include '../DataBase/session.php'; 
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>

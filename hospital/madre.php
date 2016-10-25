@@ -50,21 +50,14 @@ $db = Db::getInstance();
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de documento:</font></font></label></td>
               <td><select name="TipoDocumento" class="form-control"><option>Seleccione</option>
                 <?php
-<<<<<<< HEAD
+
                   $sql='SELECT id,descripcion FROM tipo_documento'; 
                   $stmt=$db->ejecutar($sql); 
                   while ($x=$db->obtener_fila($stmt,0)){
                     echo '<option value="'.$x['id'].'">'.$x['descripcion'].'</option>';
                   } 
-                  ?></select></td>
-=======
-$sql  = 'SELECT id,descripcion FROM tipodocumento';
-$stmt = $db->ejecutar($sql);
-while ($x = $db->obtener_fila($stmt, 0)) {
-    echo '<option value="' . $x['id'] . '">' . $x['descripcion'] . '</option>';
-}
-?></select></td>
->>>>>>> 6113a897e9d58884ae006ea6e3a028f728603794
+                  ?>
+                  </select></td>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Numero:</font></label></td>
               <td colspan="2"><input type="text" class="form-control" name="DPI" placeholder="Numero"></td>
             </tr>
@@ -94,21 +87,14 @@ while ($x = $db->obtener_fila($stmt, 0)) {
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Estado civil:</font></label></td>
               <td colspan="5"><select name="estado_civil" class="form-control"><option>Seleccione</option>
               <?php
-<<<<<<< HEAD
+
                   $sql='SELECT id,descripcion FROM estado_civil'; 
                   $stmt=$db->ejecutar($sql); 
                   while ($x=$db->obtener_fila($stmt,0)){
                     echo '<option value="'.$x['id'].'">'.$x['descripcion'].'</option>';
                   } 
                   ?>
-=======
-$sql  = 'SELECT id,descripcion FROM estadocivil';
-$stmt = $db->ejecutar($sql);
-while ($x = $db->obtener_fila($stmt, 0)) {
-    echo '<option value="' . $x['id'] . '">' . $x['descripcion'] . '</option>';
-}
-?>
->>>>>>> 6113a897e9d58884ae006ea6e3a028f728603794
+
               </select></td>
             </tr>
             <tr>
@@ -124,21 +110,14 @@ while ($x = $db->obtener_fila($stmt, 0)) {
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Nivel educativo:</font></font></label></td>
               <td colspan="3"><select name="nivel_educativo" class="form-control"><option>Seleccione</option>
                 <?php
-<<<<<<< HEAD
+
                   $sql='SELECT id,descripcion FROM nivel_educativo'; 
                   $stmt=$db->ejecutar($sql); 
                   while ($x=$db->obtener_fila($stmt,0)){
                     echo '<option value="'.$x['id'].'">'.$x['descripcion'].'</option>';
                   } 
                   ?>
-=======
-$sql  = 'SELECT id,descripcion FROM niveleducativo';
-$stmt = $db->ejecutar($sql);
-while ($x = $db->obtener_fila($stmt, 0)) {
-    echo '<option value="' . $x['id'] . '">' . $x['descripcion'] . '</option>';
-}
-?>
->>>>>>> 6113a897e9d58884ae006ea6e3a028f728603794
+
               </select></td>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">No. Total de embarazos:</font></label></td>
               <td ><input type="text" name="total_de_embarazos" class="form-control" placeholder="Numero"></td>
