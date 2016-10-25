@@ -2,15 +2,13 @@
 //Datos de configuración de la conexión a la base de datos
 
 //Servidor
-$host='localhost';
+$host = 'localhost';
 
 //Usuario
-$user='root';
+$user = 'root';
 
 //Password
-$password='root';
+$password = '';
 
 //Base de datos a utilizar
-$db='hospital';
-
-?>
+$db = 'hospital';

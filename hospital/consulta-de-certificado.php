@@ -33,6 +33,8 @@
 
   <body>
 
+
+
     <div class="container">
       <div class="header clearfix">
         <nav>
@@ -46,11 +48,12 @@
               </li>
           </ul>
         </nav>
+
         <h3 class="text-muted">Hospital</h3>
       </div>
       <form>
         <fieldset>
-          <legend>Modulo de consultas</legend>
+          <legend>Modulo dedsafconsultas</legend>
           <table class="table table-bordered">
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de certificado:</font></font></label></td>
@@ -73,7 +76,7 @@
               <td><input type="text" class="form-control" placeholder="Nombres"></td>
             </tr>
           </table>
-        </fieldset> 
+        </fieldset>
       </form>
        <div class="row">
           <button type="button" onclick=" location.href='home.php'" class="btn btn-primary">Atras <span class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
