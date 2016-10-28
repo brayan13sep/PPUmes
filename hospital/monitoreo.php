@@ -54,23 +54,39 @@ $db = Db::getInstance();
         <h3 class="text-muted">Hospital</h3>
     </div>
       <form>
-      <label></label>
+      
         <table class="table table-bordered">
         <tr colspan="8" align="center"><strong> Incubadora neonatal </strong></tr>
             <!-- Aplicadas en las celdas (<td> o <th>) -->
             <tr>
             <?php 
-              $sql='SELECT id,descripcion FROM tipo_documento'; 
+                 $sql='SELECT estado_incubadora FROM incubadora'; 
                   $stmt=$db->ejecutar($sql); 
                   while ($x=$db->obtener_fila($stmt,0)){
-                    echo '<option value="'.$x['id'].'">'.$x['descripcion'].'</option>';
+                    echo '<td class="'.$x['estado_incubadora'].'"><span class="glyphicon glyphicon-baby-formula">  </span></td>';
                   } 
 
              ?>
-              <td class="active"><span class="glyphicon glyphicon-baby-formula">  </span></td>
+             <td class="success"><span class="glyphicon glyphicon-baby-formula">  </span></td>
             </tr>
           </table>
-          
+          <table class="table table-bordered">
+        <tr colspan="8" align="center"><strong> Area de camas </strong></tr>
+            <!-- Aplicadas en las celdas (<td> o <th>) -->
+            <tr>
+            <?php 
+                 $sql='SELECT estado_incubadora FROM incubadora'; 
+                  $stmt=$db->ejecutar($sql); 
+                  while ($x=$db->obtener_fila($stmt,0)){
+                    echo '<td class="'.$x['estado_incubadora'].'"><span class="glyphicon glyphicon-baby-formula">  </span></td>';
+                  } 
+
+             ?>
+             <td class="success"><span class="glyphicon glyphicon-baby-formula">  </span></td>
+            </tr>
+          </table>
+
+
       </form>
     </div> <!-- /container -->
 
