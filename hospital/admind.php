@@ -1,12 +1,10 @@
+<!DOCTYPE html>
 <?php
-
 require '../DataBase/db.class.php';
 require '../DataBase/Conf.class.php';
-$db = Db::getInstance();
-include '../DataBase/session.php';
-?>
 
-<!DOCTYPE html>
+$db = Db::getInstance();
+?>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -17,7 +15,7 @@ include '../DataBase/session.php';
     <meta name="author" content="">
     <link rel="icon" href="../favicon.ico">
 
-    <title>Home</title>
+    <title>Neonatos</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../docs/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -27,6 +25,7 @@ include '../DataBase/session.php';
 
     <!-- Custom styles for this template -->
     <link href="../docs/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../js/jquery-ui/jquery-ui.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -42,20 +41,34 @@ include '../DataBase/session.php';
   <body>
 
     <div class="container">
-      <div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="active"><a href="home.php">Inicio</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perfil <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                <li><a href="../DataBase/logout.php">Cerrar Sesion</a></li>
-                 </ul>
-              </li>
-          </ul>
-        </nav>
-        <h3 class="text-muted">Hospital</h3>
+      <?php require 'include/headera.class.php';?>
+
+        <fieldset>
+
+    <div class="container">
+
+        <fieldset>
+         <div class="container">
+     <div class="well well-lg">
+
+      <div class="page-header">
+        <h1>Modulo Ingreso Neonatos</h1>
+        <p>
+          <a href="neonato.php" class="btn btn-primary"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Registrar Certificado</a>
+             </p>
       </div>
+
+
+
+
+
+    </div> <!-- /container -->
+
+</div>
+
+
+      </form>
+
     </div> <!-- /container -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -65,5 +78,27 @@ include '../DataBase/session.php';
     <script src="../docs/assets/js/vendor/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../docs/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../js/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../js/jquery-ui/jquery-ui.js"></script>
+    <script src="../js/jaquery-ui/external/jquery/jquery.js"></script>
+    <script>
+      $( function() {
+    $( "#datepicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true
+    });
+  } );
+       $( function() {
+    $( "#datepicker2" ).datepicker({
+      changeMonth: true,
+      changeYear: true
+    });
+  } );
+    </script>
+    <script>
+      function Limpiar() {
+        document.getElementById("formulario").reset();
+      }
+</script>
   </body>
 </html>

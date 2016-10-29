@@ -1,11 +1,10 @@
+<!DOCTYPE html>
 <?php
 require '../DataBase/db.class.php';
 require '../DataBase/Conf.class.php';
 
 $db = Db::getInstance();
 ?>
-
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -43,11 +42,49 @@ $db = Db::getInstance();
 
     <div class="container">
       <?php require 'include/headerad.class.php';?>
-      <form method="POST" action="" id="formulario">
-      </form>
+
+        <fieldset>
+
+    <div class="container">
+
+        <fieldset>
+         <div class="container">
+     <div class="well well-lg">
+
+      <div class="page-header">
+        <h1> Nuevo Usuario</h1>
+        <p>
+          <a href="profecional.php" class="btn btn-primary"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Registrar Usuario</a>
+             </p>
+      </div>
+    <!-- /container -->
+
+ <div class="container">
+     
+
+      <div class="page-header">
+        <h1>Listar Usuarios </h1>
+        <p>
+          <a href="usuarios.php" class="btn btn-primary"><span class="glyphicon glyphicon-file" aria-hidden="true"></span>  Ver Usuarios</a>
+             </p>
+      </div>
 
     </div> <!-- /container -->
 
+<div class="container">
+       <div class="page-header">
+        <h1>Mensajes De Contacto</h1>
+        <p>
+          <a href="contactos.php" class="btn btn-primary"><span class="glyphicon glyphicon-file" aria-hidden="true"></span>  Ver Mensajes</a>
+             </p>
+      </div>
+
+    </div> <!-- /container -->
+
+      </form>
+</div> 
+    </div> <!-- /container -->
+</div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../docs/assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="../docs/dist/js/bootstrap.min.js"></script>

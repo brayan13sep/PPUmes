@@ -65,21 +65,24 @@ $db = Db::getInstance();
       <td>Mark</td>
       <td>Otto</td>
       <td>@mdo</td>
-      <td><a href="#" class="btn btn-info">Editar</a></td>
+      <td><a href="#" class="btn btn-info">Editar</a>
+       <td<a href="#" class="btn btn-danger">Borrar</a></td>
     </tr>
     <tr>
       <th scope="row">2</th>
       <td>Jacob</td>
       <td>Thornton</td>
       <td>@fat</td>
-      <td><a href="#" class="btn btn-info">Editar</a></td>
+      <td><a href="#" class="btn btn-info">Editar</a>
+       <a href="#" class="btn btn-danger">Borrar</a></td>
     </tr>
     <tr>
       <th scope="row">3</th>
       <td>Larry</td>
       <td>the Bird</td>
       <td>@twitter</td>
-      <td><a href="#" class="btn btn-info">Editar</a></td>
+      <td><a href="#" class="btn btn-info">Editar</a>
+       <a href="#" class="btn btn-danger">borar</a></td>
     </tr>
   </tbody>
 </table>

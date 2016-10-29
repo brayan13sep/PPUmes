@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         //session_register("myusuario");
         $_SESSION['login_user'] = $myusuario;
         if ($myusuario == "admin") {
-            header("location: agrega-usuario.php");
+            header("location: home.php");
         } else if ($myusuario == "enfermero") {
             header("location: madre.php");
         } else if ($myusuario == "director") {

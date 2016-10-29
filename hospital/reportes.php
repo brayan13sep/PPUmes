@@ -87,6 +87,8 @@ include '../DataBase/session.php';
       </form>
 
 </div>
+<div class="well well-lg">
+
       <?php
 $sede         = $_POST['sede'];
 $tipo_reporte = $_POST['tipo_reporte'];
@@ -95,6 +97,8 @@ $fecha_fin    = $_POST['fecha_fin'];
 
 imprimir($sede, $tipo_reporte, $fecha_inicio, $fecha_fin);
 ?>
+
+</div>
     </div> <!-- /container -->
 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

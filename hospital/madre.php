@@ -42,7 +42,7 @@ $db = Db::getInstance();
     <div class="container">
       <?php require 'include/header.class.php';?>
       <div class="well well-lg">
- 
+
       <form method="POST" action="inserts/insert-madre.php" id="formulario">
 
         <fieldset>
@@ -52,32 +52,34 @@ $db = Db::getInstance();
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de documento:</font></font></label></td>
               <td><select name="TipoDocumento" class="form-control"><option>Seleccione</option>
                 <?php
-                  $sql='SELECT id,descripcion FROM tipo_documento'; 
-                  $stmt=$db->ejecutar($sql); 
-                  while ($x=$db->obtener_fila($stmt,0)){
-                    echo '<option value="'.$x['id'].'">'.$x['descripcion'].'</option>';
-                  } 
-                  ?>
+$sql  = 'SELECT id,descripcion FROM tipo_documento';
+$stmt = $db->ejecutar($sql);
+while ($x = $db->obtener_fila($stmt, 0)) {
+    echo '<option value="' . $x['id'] . '">' . $x['descripcion'] . '</option>';
+}
+?>
                   </select></td>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Numero:</font></label></td>
               <td colspan="2"><input type="text" class="form-control" name="DPI" placeholder="Numero"></td>
+            </tr>
+             <tr>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Nombres:</font></label></td>
+              <td colspan="4"><input type="text" class="form-control" name="Nombre" placeholder="Nombres"></td>
             </tr>
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Primer Apellido:</font></label></td>
               <td colspan="4"><input type="text" class="form-control" name="primer_apellido" placeholder="Primer Apellido"></td>
             </tr>
-            <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">RFID:</font></label></td>
-              <td colspan="4"><input type="text" class="form-control" name="RFID" placeholder="RFID"></td>
-            </tr>
-            <tr>
+             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Segundo Apellido:</font></label></td>
               <td colspan="4"><input type="text" class="form-control" name="segundo_apellido" placeholder="Segundo Apellido"></td>
             </tr>
             <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Nombres:</font></label></td>
-              <td colspan="4"><input type="text" class="form-control" name="Nombre" placeholder="Nombres"></td>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">RFID:</font></label></td>
+              <td colspan="4"><input type="text" class="form-control" name="RFID" placeholder="RFID"></td>
             </tr>
+
+
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Fecha de nacimiento:</font></label></td>
               <td colspan="3"><input type="text" class="form-control" name="fecha_nacimiento" id="datepicker" placeholder="yyyy/mm/dd"></td>
@@ -88,12 +90,12 @@ $db = Db::getInstance();
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Estado civil:</font></label></td>
               <td colspan="5"><select name="estado_civil" class="form-control"><option>Seleccione</option>
               <?php
-                  $sql='SELECT id,descripcion FROM estado_civil'; 
-                  $stmt=$db->ejecutar($sql); 
-                  while ($x=$db->obtener_fila($stmt,0)){
-                    echo '<option value="'.$x['id'].'">'.$x['descripcion'].'</option>';
-                  } 
-                  ?>
+$sql  = 'SELECT id,descripcion FROM estado_civil';
+$stmt = $db->ejecutar($sql);
+while ($x = $db->obtener_fila($stmt, 0)) {
+    echo '<option value="' . $x['id'] . '">' . $x['descripcion'] . '</option>';
+}
+?>
 
               </select></td>
             </tr>
@@ -110,12 +112,12 @@ $db = Db::getInstance();
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Nivel educativo:</font></font></label></td>
               <td colspan="3"><select name="nivel_educativo" class="form-control"><option>Seleccione</option>
                 <?php
-                  $sql='SELECT id,descripcion FROM nivel_educativo'; 
-                  $stmt=$db->ejecutar($sql); 
-                  while ($x=$db->obtener_fila($stmt,0)){
-                    echo '<option value="'.$x['id'].'">'.$x['descripcion'].'</option>';
-                  } 
-                  ?>
+$sql  = 'SELECT id,descripcion FROM nivel_educativo';
+$stmt = $db->ejecutar($sql);
+while ($x = $db->obtener_fila($stmt, 0)) {
+    echo '<option value="' . $x['id'] . '">' . $x['descripcion'] . '</option>';
+}
+?>
 
               </select></td>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">No. Total de embarazos:</font></label></td>
@@ -148,12 +150,12 @@ $db = Db::getInstance();
           <button type="button" onclick="Limpiar()" class="btn btn-danger">Limpiar <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
            <button type="submit" class="btn btn-success">Guardar <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span></button>
           <button type="button" onclick=" location.href='home.php'" class="btn btn-primary"> Inicio  <span class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-         
+
                             </div>
                         </div>
                         </div>
 
-       
+
       </form>
 
 </div>

@@ -40,7 +40,7 @@ $db = Db::getInstance();
   <body>
 
     <div class="container">
-      <?php require 'include/header.class.php';?>
+      <?php require 'include/headera.class.php';?>
       <form method="POST" action="inserts/insert-neonato.php" id="formulario">
        <div class="well well-lg">
 
@@ -150,7 +150,7 @@ while ($x = $db->obtener_fila($stmt, 0)) {
 
           <button type="button" onclick="Limpiar()" class="btn btn-danger">Limpiar <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
            <button type="submit" class="btn btn-success">Guardar <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span></button>
-          <button type="button" onclick=" location.href='home.php'" class="btn btn-primary"> Inicio  <span class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+          <button type="button" onclick=" location.href='admind.php'" class="btn btn-primary"> Inicio  <span class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
 
                             </div>
                         </div>
