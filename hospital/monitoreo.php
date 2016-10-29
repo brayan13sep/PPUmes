@@ -1,12 +1,10 @@
+<!DOCTYPE html>
 <?php
-
 require '../DataBase/db.class.php';
 require '../DataBase/Conf.class.php';
-$db = Db::getInstance();
-include '../DataBase/session.php';
-?>
 
-<!DOCTYPE html>
+$db = Db::getInstance();
+?>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -17,7 +15,7 @@ include '../DataBase/session.php';
     <meta name="author" content="">
     <link rel="icon" href="../favicon.ico">
 
-    <title>Home</title>
+    <title>Monitoreo</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../docs/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -27,6 +25,7 @@ include '../DataBase/session.php';
 
     <!-- Custom styles for this template -->
     <link href="../docs/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../js/jquery-ui/jquery-ui.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -42,45 +41,53 @@ include '../DataBase/session.php';
   <body>
 
     <div class="container">
+      
       <div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="active"><a href="home.php">I</a></li>
-              <li class="dropdown">
-
-
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perfil <span class="caret"></span></a>
-                <ul class="dropdown-menu">
+      <nav>
+        <ul class="nav nav-pills pull-right">
+          <li role="presentation"><a href="home.php">Inicio</a></li>
                 <li><a href="../DataBase/logout.php">Cerrar Sesion</a></li>
-                 </ul>
-              </li>
-          </ul>
-           <ul class="nav navbar-nav navbar-right">
-               <li><a href=""><span class="glyphicon glyphicon-user"></span> Registrar</a></li>
-
-            </ul>
-        </nav>
+              </ul>
+          </li>
+        </ul>
+      </nav>
         <h3 class="text-muted">Hospital</h3>
-      </div>
-      <div class="page-header">
-        <h1>Modulo de certificado nacido vivo</h1>
-        <p>
-          <a href="madre.php" class="btn btn-primary"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Registrar Certificado</a>
-          <a href="editar-certificado.php" class="btn btn-default"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Editar Certificado</a>
-        </p>
-      </div>
-      <div class="page-header">
-        <h1>Modulo de consultas</h1>
-        <p>
-          <a href="consulta-de-certificado.php" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Consultas de Certificado</a>
-        </p>
-      </div>
-      <div class="page-header">
-        <h1>Modulo de reportes</h1>
-        <p>
-          <a href="reportes.php" class="btn btn-primary"><span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> Reporte de Certificados</a>
-        </p>
-      </div>
+    </div>
+      <form>
+      
+        <table class="table table-bordered">
+        <tr colspan="8" align="center"><strong> Incubadora neonatal </strong></tr>
+            <!-- Aplicadas en las celdas (<td> o <th>) -->
+            <tr>
+            <?php 
+                 $sql='SELECT estado_incubadora FROM incubadora'; 
+                  $stmt=$db->ejecutar($sql); 
+                  while ($x=$db->obtener_fila($stmt,0)){
+                    echo '<td class="'.$x['estado_incubadora'].'"><span class="glyphicon glyphicon-baby-formula">  </span></td>';
+                  } 
+
+             ?>
+             <td class="success"><span class="glyphicon glyphicon-baby-formula">  </span></td>
+            </tr>
+          </table>
+          <table class="table table-bordered">
+        <tr colspan="8" align="center"><strong> Area de camas </strong></tr>
+            <!-- Aplicadas en las celdas (<td> o <th>) -->
+            <tr>
+            <?php 
+                 $sql='SELECT estado_incubadora FROM incubadora'; 
+                  $stmt=$db->ejecutar($sql); 
+                  while ($x=$db->obtener_fila($stmt,0)){
+                    echo '<td class="'.$x['estado_incubadora'].'"><span class="glyphicon glyphicon-baby-formula">  </span></td>';
+                  } 
+
+             ?>
+             <td class="success"><span class="glyphicon glyphicon-baby-formula">  </span></td>
+            </tr>
+          </table>
+
+
+      </form>
     </div> <!-- /container -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -90,5 +97,27 @@ include '../DataBase/session.php';
     <script src="../docs/assets/js/vendor/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../docs/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../js/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../js/jquery-ui/jquery-ui.js"></script>
+    <script src="../js/jaquery-ui/external/jquery/jquery.js"></script>
+    <script>
+      $( function() {
+    $( "#datepicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true
+    });
+  } );
+       $( function() {
+    $( "#datepicker2" ).datepicker({
+      changeMonth: true,
+      changeYear: true
+    });
+  } );
+    </script>
+    <script>
+      function Limpiar() {
+        document.getElementById("formulario").reset();
+      }
+</script>
   </body>
 </html>

@@ -35,9 +35,12 @@
 
   <body>
 <div class="container" style="margin-top:50px;">
-     
-      </div> 
-      
+
+      </div>
+
+
+
+      </div>
   <div class="container">
     <div class="row">
         <div class="col-md-16">
@@ -83,11 +86,11 @@
                                 <textarea class="form-control" id="message" name="message" placeholder="Introduzca su mensaje para nosotros aquí. Nos pondremos en contacto con usted lo  mas pronto posible ." rows="7"></textarea>
                             </div>
                         </div>
-
                         <div class="form-group">
                             <div class="col-md-12 text-center">
-                                <button type="" class="btn btn-info ">Enviar</button>
-                                <button type="reset"  class="btn btn-danger">Limpiar</button>
+                                <button type="" class="btn btn-info "><i class="fa fa-check" aria-hidden="true"></i>   Enviar</button>
+                                <button type="reset"  class="btn btn-danger"><i class="fa fa-refresh" aria-hidden="true"></i> Limpiar</button>
+                                <button type="button" onclick=" location.href='index.html'" class="btn btn-primary"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Inicio</button>
                             </div>
                         </div>
                     </fieldset>
@@ -105,4 +108,5 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../docs/assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
+
 </html>

@@ -57,7 +57,7 @@
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de documento:</font></label></td>
               <td><select name="tipo_documento" class="form-control"><option>Seleccione</option>
                 <?php
-                  $sql='SELECT id,descripcion FROM tipodocumento'; 
+                  $sql='SELECT id,descripcion FROM tipo_documento'; 
                   $stmt=$db->ejecutar($sql); 
                   while ($x=$db->obtener_fila($stmt,0)){
                     echo '<option value="'.$x['id'].'">'.$x['descripcion'].'</option>';

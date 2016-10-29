@@ -17,7 +17,7 @@ require '../DataBase/db.class.php';
     <meta name="author" content="">
     <link rel="icon" href="../favicon.ico">
 
-    <title>Consulta de certificado</title>
+    <title>Home</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../docs/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -41,8 +41,6 @@ require '../DataBase/db.class.php';
 
   <body>
 
-
-
     <div class="container">
       <div class="header clearfix">
         <nav>
@@ -51,45 +49,12 @@ require '../DataBase/db.class.php';
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perfil <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                <li><a href="#">Cerrar Sesion</a></li>
+                <li><a href="../DataBase/logout.php">Cerrar Sesion</a></li>
                  </ul>
               </li>
           </ul>
         </nav>
-
         <h3 class="text-muted">Hospital</h3>
-      </div>
-      <form>
-        <fieldset>
-          <legend>Modulo dedsafconsultas</legend>
-          <table class="table table-bordered">
-            <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de certificado:</font></font></label></td>
-              <td><label><font>CERTIFICADO NACIDO VIVO</font></font></label></td>
-            </tr>
-            <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Numero de certificado:</font></font></label></td>
-              <td><input type="text" class="form-control" placeholder="Numero"></td>
-            </tr>
-            <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Primer Apellido:</font></label></td>
-              <td><input type="text" class="form-control" placeholder="Primer Apellido"></td>
-            </tr>
-            <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Segundo Apellido:</font></label></td>
-              <td><input type="text" class="form-control" placeholder="Segundo Apellido"></td>
-            </tr>
-            <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Nombres:</font></label></td>
-              <td><input type="text" class="form-control" placeholder="Nombres"></td>
-            </tr>
-          </table>
-        </fieldset>
-      </form>
-       <div class="row">
-          <button type="button" onclick=" location.href='home.php'" class="btn btn-primary">Atras <span class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-          <button type="button" onclick="Limpiar()" class="btn btn-danger">Limpiar <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
-          <button type="button" class="btn btn-success">Buscar <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
       </div>
     </div> <!-- /container -->
 
@@ -100,10 +65,5 @@ require '../DataBase/db.class.php';
     <script src="../docs/assets/js/vendor/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../docs/assets/js/ie10-viewport-bug-workaround.js"></script>
-    <script>
-      function Limpiar() {
-        document.getElementById("formulario").reset();
-      }
-</script>
   </body>
 </html>

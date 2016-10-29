@@ -78,5 +78,6 @@ VALUES (
 )"; 
 $stmt=$db->ejecutar($sql);
 
-header('Location: ../neonato.php');
+echo $fecha_nacimiento;
+//header('Location: ../neonato.php');
  ?>

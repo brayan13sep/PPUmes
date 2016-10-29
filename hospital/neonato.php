@@ -91,7 +91,7 @@
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Atendio el parto:</font></font></label></td>
               <td><select name="atendio_parto" class="form-control"><option>Seleccione</option>
                 <?php
-                  $sql='SELECT id,descripcion FROM atendioparto'; 
+                  $sql='SELECT id,descripcion FROM atendio_parto'; 
                   $stmt=$db->ejecutar($sql); 
                   while ($x=$db->obtener_fila($stmt,0)){
                     echo '<option value="'.$x['id'].'">'.$x['descripcion'].'</option>';
@@ -101,7 +101,7 @@
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de parto:</font></label></td>
               <td><select name="tipo_parto" class="form-control"><option>Seleccione</option>
                 <?php
-                  $sql='SELECT id,descripcion FROM tipoparto'; 
+                  $sql='SELECT id,descripcion FROM tipo_parto'; 
                   $stmt=$db->ejecutar($sql); 
                   while ($x=$db->obtener_fila($stmt,0)){
                     echo '<option value="'.$x['id'].'">'.$x['descripcion'].'</option>';
@@ -113,7 +113,7 @@
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Condicion del parto:</font></font></label></td>
               <td><select name="condicion_parto" class="form-control"><option>Seleccione</option>
                 <?php
-                  $sql='SELECT id,descripcion FROM condicionparto'; 
+                  $sql='SELECT id,descripcion FROM condicion_parto'; 
                   $stmt=$db->ejecutar($sql); 
                   while ($x=$db->obtener_fila($stmt,0)){
                     echo '<option value="'.$x['id'].'">'.$x['descripcion'].'</option>';
