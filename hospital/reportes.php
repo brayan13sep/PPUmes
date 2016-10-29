@@ -1,8 +1,6 @@
 <?php
  
-require '../DataBase/db.class.php';
-  require '../DataBase/Conf.class.php';
-  $db=Db::getInstance();
+include 'inserts/funciones-reportes.php';
   include '../DataBase/session.php'; 
  ?>
 
@@ -58,15 +56,15 @@ require '../DataBase/db.class.php';
         </nav>
         <h3 class="text-muted">Hospital</h3>
       </div>
-      <form>
+      <form method="POST" action="">
         <fieldset>
           <legend>Modulo de consultas</legend>
           <table class="table table-bordered">
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Sede:</font></label></td>
-              <td colspan="1"><select class="form-control"><option>seleccione</option><option>Hospital de Amatitlan</option></select></td>
+              <td colspan="1"><select name="sede" class="form-control"><option>seleccione</option><option value="Hospital de Amatitlan">Hospital de Amatitlan</option></select></td>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de reporte:</font></label></td>
-              <td colspan="1"><select class="form-control"><option>seleccione</option><option>No. Neonatos nacidos</option><option>Enfermedades Registradas</option><option>Edad de madres</option><option>neonatos nacidos</option></select></td>
+              <td colspan="1"><select name="tipo_reporte" class="form-control"><option>seleccione</option><option name="No. Neonatos nacidos">No. Neonatos nacidos</option><option name="enfermedades_registradas">Enfermedades Registradas</option><option name="Edad de madres">Edad de madres</option></select></td>
             </tr>
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Fecha inicio:</font></label></td>
@@ -76,12 +74,19 @@ require '../DataBase/db.class.php';
             </tr>
           </table>
         </fieldset> 
-      </form>
-       <div class="row">
-          <button type="button" class="btn btn-primary">Inicio <span class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+        <div class="row">
           <button type="button" class="btn btn-danger">Limpiar <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
-          <button type="button" class="btn btn-success">Generar Reporte <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+          <button type="submit" class="btn btn-success">Generar Reporte <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
       </div>
+      </form>
+      <?php 
+      $sede=$_POST['sede'];
+      $tipo_reporte=$_POST['tipo_reporte'];
+      $fecha_inicio=$_POST['fecha_inicio'];
+      $fecha_fin=$_POST['fecha_fin'];
+
+      imprimir($sede, $tipo_reporte, $fecha_inicio, $fecha_fin); 
+      ?>
     </div> <!-- /container -->
 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
