@@ -2,7 +2,6 @@
 <?php
 require '../DataBase/db.class.php';
 require '../DataBase/Conf.class.php';
-
 $db = Db::getInstance();
 ?>
 <html lang="en">
@@ -42,10 +41,10 @@ $db = Db::getInstance();
 
     <div class="container">
       <?php require 'include/header.class.php';?>
-
-<div class="well well-lg">
-
+      <div class="well well-lg">
+ 
       <form method="POST" action="inserts/insert-madre.php" id="formulario">
+
         <fieldset>
           <legend> Datos de la madre</legend>
           <table class="table table-bordered">
@@ -53,13 +52,12 @@ $db = Db::getInstance();
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de documento:</font></font></label></td>
               <td><select name="TipoDocumento" class="form-control"><option>Seleccione</option>
                 <?php
-
-$sql  = 'SELECT id,descripcion FROM tipo_documento';
-$stmt = $db->ejecutar($sql);
-while ($x = $db->obtener_fila($stmt, 0)) {
-    echo '<option value="' . $x['id'] . '">' . $x['descripcion'] . '</option>';
-}
-?>
+                  $sql='SELECT id,descripcion FROM tipo_documento'; 
+                  $stmt=$db->ejecutar($sql); 
+                  while ($x=$db->obtener_fila($stmt,0)){
+                    echo '<option value="'.$x['id'].'">'.$x['descripcion'].'</option>';
+                  } 
+                  ?>
                   </select></td>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Numero:</font></label></td>
               <td colspan="2"><input type="text" class="form-control" name="DPI" placeholder="Numero"></td>
@@ -82,7 +80,7 @@ while ($x = $db->obtener_fila($stmt, 0)) {
             </tr>
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Fecha de nacimiento:</font></label></td>
-              <td colspan="3"><input type="text" class="form-control" name="fecha_nacimiento" id="datepicker" placeholder="mm/dd/yyyy"></td>
+              <td colspan="3"><input type="text" class="form-control" name="fecha_nacimiento" id="datepicker" placeholder="yyyy/mm/dd"></td>
               <td colspan="2"><input type="text" class="form-control" name="Edad" placeholder="Edad"></td>
 
             </tr>
@@ -90,13 +88,12 @@ while ($x = $db->obtener_fila($stmt, 0)) {
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Estado civil:</font></label></td>
               <td colspan="5"><select name="estado_civil" class="form-control"><option>Seleccione</option>
               <?php
-
-$sql  = 'SELECT id,descripcion FROM estado_civil';
-$stmt = $db->ejecutar($sql);
-while ($x = $db->obtener_fila($stmt, 0)) {
-    echo '<option value="' . $x['id'] . '">' . $x['descripcion'] . '</option>';
-}
-?>
+                  $sql='SELECT id,descripcion FROM estado_civil'; 
+                  $stmt=$db->ejecutar($sql); 
+                  while ($x=$db->obtener_fila($stmt,0)){
+                    echo '<option value="'.$x['id'].'">'.$x['descripcion'].'</option>';
+                  } 
+                  ?>
 
               </select></td>
             </tr>
@@ -113,13 +110,12 @@ while ($x = $db->obtener_fila($stmt, 0)) {
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Nivel educativo:</font></font></label></td>
               <td colspan="3"><select name="nivel_educativo" class="form-control"><option>Seleccione</option>
                 <?php
-
-$sql  = 'SELECT id,descripcion FROM nivel_educativo';
-$stmt = $db->ejecutar($sql);
-while ($x = $db->obtener_fila($stmt, 0)) {
-    echo '<option value="' . $x['id'] . '">' . $x['descripcion'] . '</option>';
-}
-?>
+                  $sql='SELECT id,descripcion FROM nivel_educativo'; 
+                  $stmt=$db->ejecutar($sql); 
+                  while ($x=$db->obtener_fila($stmt,0)){
+                    echo '<option value="'.$x['id'].'">'.$x['descripcion'].'</option>';
+                  } 
+                  ?>
 
               </select></td>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">No. Total de embarazos:</font></label></td>
@@ -144,17 +140,23 @@ while ($x = $db->obtener_fila($stmt, 0)) {
             </tr>
           </table>
         </fieldset>
-        <div class="form-group">
+
+  <div class="form-group">
            <div class="col-md-12 text-center">
+<div class="row">
+
           <button type="button" onclick="Limpiar()" class="btn btn-danger">Limpiar <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
-          <button type="button" onclick=" location.href='home.php'" class="btn btn-primary">Atras <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></button>
-          <button type="submit" class="btn btn-primary">Siguiente <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></button>
-         </div>
-         </div>
+           <button type="submit" class="btn btn-success">Guardar <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span></button>
+          <button type="button" onclick=" location.href='home.php'" class="btn btn-primary"> Inicio  <span class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+         
+                            </div>
+                        </div>
+                        </div>
+
+       
       </form>
 
-
-
+</div>
     </div> <!-- /container -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

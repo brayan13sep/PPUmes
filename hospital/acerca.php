@@ -10,11 +10,16 @@
     <link rel="icon" href="../favicon.ico">
 
     <title>Home</title>
-     <link href="../docs/dist/css/business-casual.css" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+     <link href="../dist/css/business-casual.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet"
 
-   <link href="../docs/dist/css/bootstrap.min.css" rel="stylesheet">
+    type="text/css">
+   <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+   <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/business-casual.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../docs/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
@@ -50,17 +55,16 @@
                     <hr>
                 </div>
                 <div class="col-md-6">
-                    <img class="img-responsive img-border-left" src="/PPUmes/dist/image/umes.jpg" alt="">
+                    <img class="img-responsive img-border-left" src="/PPUmes/dist/image/umes.png" alt="">
                 </div>
                 <div class="col-md-6">
                     <p>El crecimiento en los avances tecnológicos que se presentan en nuestra sociedad, está reflejando de muchas carencias en varios de los sectores de los servicios públicos con los que contamos,  uno de ellos en el sector de salud, dado que los colaboradores de cada uno de los recintos, aún trabajan de manera física, pudiendo dar paso a errores involuntarios como: pérdida de los formatos que utilizan en los que llenan con la información necesaria de cada uno de los individuos, es por ello que se plantea la solución tecnológica que dará un salto a este sector en el ámbito tecnológico.</p>
                     <p>Consta en el desarrollo de una plataforma en la cual se realizará el ingreso de toda la información necesaria de la madre y neonato, requerida en el pre y post parto, con solo tener el acceso a unas pantallas e ingresar los datos requeridos en ellas, la información quedará almacenada y registrada en una base de datos, de igual manera grabada en una pulsera que portaran la madre y el neonato, que de momento se utiliza mediante una etiqueta escrita a puño con lapicero, esta contará con un RFID en el cual estará grabada la información de la madre, y la pulsera será portara por la madre y el neonato, al neonato se le colocara en el momento de culminar la labor de parto.</p>
-                    <p>Se emplea el mismo procedimiento que se utiliza actualmente, cambiando la forma en la que la información será registrada en el TAG RFID que llevará la pulsera, y no solamente en una etiqueta de papel, brindándole seguridad de que la información será la correcta, y evitar así una confusión por un error involuntario.</p>
-                    <p>La información de la pulsera deberá de ser cotejada al momento de dar de alta a ambos individuos, es decir que las pulseras serán pasadas frente al lector de RFID permitiendo la lectura de la información almacenada en ambas pulseras, con el fin de verificar que ambos RFID coincidan, el de la madre con el del neonato, para poder emitir la orden de alta del recinto hospitalario.</p>
-                    <p>Con el desarrollo de esta plataforma, se pretende automatizar uno de los tantos procesos con los que cuenta el área de maternidad de los recintos hospitalarios, permitiendo a futuro hacer enlace con otras dependencias para que el trámite de sentado de partidas, y defunciones sea más eficiente, y evitar así realizar trámites por separado, y que todo sea gestionado en un solo sitio</p>
+
                 </div>
-                <div class="clearfix"></div>
+                 <button type="button" onclick=" location.href='index.html'" class="btn btn-primary btn-lg"> <span class="glyphicon glyphicon-home" aria-hidden="true"> </span>  Inicio</button>
             </div>
+
         </div>
 
 

@@ -1,8 +1,5 @@
 <?php
-
-require '../DataBase/db.class.php';
-require '../DataBase/Conf.class.php';
-$db = Db::getInstance();
+include 'inserts/funciones-reportes.php';
 include '../DataBase/session.php';
 ?>
 
@@ -25,6 +22,7 @@ include '../DataBase/session.php';
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="../docs/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="../js/jquery-ui/jquery-ui.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="../docs/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
@@ -46,7 +44,7 @@ include '../DataBase/session.php';
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="active"><a href="/home.php">Inicio</a></li>
+            <li role="presentation" class="active"><a href="home.php">Inicio</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perfil <span class="caret"></span></a>
                 <ul class="dropdown-menu">
@@ -57,50 +55,76 @@ include '../DataBase/session.php';
         </nav>
         <h3 class="text-muted">Hospital</h3>
       </div>
-     <div class="well well-lg">
+      <div class="well well-lg">
 
-
-
-      <form>
+      <form method="POST" action="">
         <fieldset>
           <legend>Modulo de consultas</legend>
           <table class="table table-bordered">
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Sede:</font></label></td>
-              <td colspan="3"><select class="form-control"><option>seleccione</option><option>Hospital de Amatitlan</option><option>Hospital de Escuintla</option></select></td>
+              <td colspan="1"><select name="sede" class="form-control"><option>seleccione</option><option value="Hospital de Amatitlan">Hospital de Amatitlan</option></select></td>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de reporte:</font></label></td>
+              <td colspan="1"><select name="tipo_reporte" class="form-control"><option>seleccione</option><option name="No. Neonatos nacidos">No. Neonatos nacidos</option><option name="enfermedades_registradas">Enfermedades Registradas</option><option name="Edad de madres">Edad de madres</option></select></td>
             </tr>
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Fecha inicio:</font></label></td>
-              <td><select class="form-control"><option>Dia</option></select></td>
-              <td><select class="form-control"><option>Mes</option></select></td>
-              <td><select class="form-control"><option>Año</option></select></td>
-            </tr>
-            <tr>
+              <td><input type="text" class="form-control" name="fecha_inicio" id="datepicker" placeholder="yyyy/mm/dd"></td>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Fecha fin:</font></label></td>
-              <td><select class="form-control"><option>Dia</option></select></td>
-              <td><select class="form-control"><option>Mes</option></select></td>
-              <td><select class="form-control"><option>Año</option></select></td>
+              <td><input type="text" class="form-control" name="fecha_fin" id="datepicker2" placeholder="yyyy/mm/dd"></td>
             </tr>
           </table>
         </fieldset>
-          <div class="form-group">
+ <div class="form-group">
            <div class="col-md-12 text-center">
-            <button type="button" onclick=" location.href='home.php'" class="btn btn-primary">Inicio <span class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
-          <button type="button" class="btn btn-danger">Limpiar <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
-          <button type="button" class="btn btn-success">Generar Reporte <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-      </div>
+                <div class="row">
+
+ <button type="button" class="btn btn-danger">Limpiar <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+          <button type="submit" class="btn btn-success">Generar Reporte <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                            </div>
+                        </div>
+                        </div>
       </form>
-      </div>
 
+</div>
+      <?php
+$sede         = $_POST['sede'];
+$tipo_reporte = $_POST['tipo_reporte'];
+$fecha_inicio = $_POST['fecha_inicio'];
+$fecha_fin    = $_POST['fecha_fin'];
 
-          </div> <!-- /container -->
+imprimir($sede, $tipo_reporte, $fecha_inicio, $fecha_fin);
+?>
+    </div> <!-- /container -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../docs/assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="../docs/dist/js/bootstrap.min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
     <script src="../docs/assets/js/vendor/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../docs/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../js/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../js/jquery-ui/jquery-ui.js"></script>
+    <script src="../js/jaquery-ui/external/jquery/jquery.js"></script>
+    <script>
+      $( function() {
+    $( "#datepicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true
+    });
+  } );
+       $( function() {
+    $( "#datepicker2" ).datepicker({
+      changeMonth: true,
+      changeYear: true
+    });
+  } );
+    </script>
+    <script>
+      function Limpiar() {
+        document.getElementById("formulario").reset();
+      }
+</script>
   </body>
 </html>
