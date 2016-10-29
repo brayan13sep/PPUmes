@@ -1,10 +1,10 @@
 <?php
- 
+
 require '../DataBase/db.class.php';
-  require '../DataBase/Conf.class.php';
-  $db=Db::getInstance();
-  include '../DataBase/session.php'; 
- ?>
+require '../DataBase/Conf.class.php';
+$db = Db::getInstance();
+include '../DataBase/session.php';
+?>
 
 
 <!DOCTYPE html>
@@ -46,7 +46,7 @@ require '../DataBase/db.class.php';
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="active"><a href="home.html">Inicio</a></li>
+            <li role="presentation" class="active"><a href="/home.php">Inicio</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perfil <span class="caret"></span></a>
                 <ul class="dropdown-menu">
@@ -57,6 +57,10 @@ require '../DataBase/db.class.php';
         </nav>
         <h3 class="text-muted">Hospital</h3>
       </div>
+     <div class="well well-lg">
+
+
+
       <form>
         <fieldset>
           <legend>Modulo de consultas</legend>
@@ -78,14 +82,18 @@ require '../DataBase/db.class.php';
               <td><select class="form-control"><option>Año</option></select></td>
             </tr>
           </table>
-        </fieldset> 
-      </form>
-       <div class="row">
-          <button type="button" class="btn btn-primary">Inicio <span class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
+        </fieldset>
+          <div class="form-group">
+           <div class="col-md-12 text-center">
+            <button type="button" onclick=" location.href='home.php'" class="btn btn-primary">Inicio <span class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
           <button type="button" class="btn btn-danger">Limpiar <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
           <button type="button" class="btn btn-success">Generar Reporte <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
       </div>
-    </div> <!-- /container -->
+      </form>
+      </div>
+
+
+          </div> <!-- /container -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../docs/assets/js/vendor/jquery.min.js"><\/script>')</script>

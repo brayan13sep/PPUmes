@@ -1,10 +1,10 @@
 <?php
- 
+
 require '../DataBase/db.class.php';
-  require '../DataBase/Conf.class.php';
-  $db=Db::getInstance();
-  include '../DataBase/session.php'; 
- ?>
+require '../DataBase/Conf.class.php';
+$db = Db::getInstance();
+include '../DataBase/session.php';
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -59,17 +59,25 @@ require '../DataBase/db.class.php';
 
         <h3 class="text-muted">Hospital</h3>
       </div>
+      <div class="well well-lg">
+
+
       <form>
+
         <fieldset>
-          <legend>Modulo dedsafconsultas</legend>
+          <legend>Modulo De Consultas</legend>
           <table class="table table-bordered">
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de certificado:</font></font></label></td>
-              <td><label><font>CERTIFICADO NACIDO VIVO</font></font></label></td>
+              <td><label><font>CERTIFICADO NACIMIENTO</font></font></label></td>
             </tr>
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Numero de certificado:</font></font></label></td>
               <td><input type="text" class="form-control" placeholder="Numero"></td>
+            </tr>
+             <tr>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Nombres:</font></label></td>
+              <td><input type="text" class="form-control" placeholder="Nombres"></td>
             </tr>
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Primer Apellido:</font></label></td>
@@ -79,19 +87,21 @@ require '../DataBase/db.class.php';
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Segundo Apellido:</font></label></td>
               <td><input type="text" class="form-control" placeholder="Segundo Apellido"></td>
             </tr>
-            <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Nombres:</font></label></td>
-              <td><input type="text" class="form-control" placeholder="Nombres"></td>
-            </tr>
+
           </table>
         </fieldset>
-      </form>
-       <div class="row">
+       <div class="form-group">
+           <div class="col-md-12 text-center">
           <button type="button" onclick=" location.href='home.php'" class="btn btn-primary">Atras <span class="glyphicon glyphicon-home" aria-hidden="true"></span></button>
           <button type="button" onclick="Limpiar()" class="btn btn-danger">Limpiar <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
           <button type="button" class="btn btn-success">Buscar <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-      </div>
-    </div> <!-- /container -->
+         </div>
+ </div>
+
+
+
+      </form>
+</div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../docs/assets/js/vendor/jquery.min.js"><\/script>')</script>

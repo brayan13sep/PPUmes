@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<?php 
-  require '../DataBase/db.class.php';
-  require '../DataBase/Conf.class.php';
-  $db=Db::getInstance();
- ?>
+<?php
+require '../DataBase/db.class.php';
+require '../DataBase/Conf.class.php';
+$db = Db::getInstance();
+?>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -40,10 +40,12 @@
   <body>
 
     <div class="container">
-      <?php require 'include/header.class.php'; ?>
+      <?php require 'include/headerad.class.php';?>
+      <div class="well well-lg">
+
       <form method="POST" action="inserts/insert-profecional.php" id="formulario">
         <fieldset>
-          <legend> Datos del profecional que certifica el nacimiento</legend>
+          <legend> Datos del profecional </legend>
           <table class="table table-bordered">
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Profecion:</font></font></label></td>
@@ -57,15 +59,19 @@
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de documento:</font></label></td>
               <td><select name="tipo_documento" class="form-control"><option>Seleccione</option>
                 <?php
-                  $sql='SELECT id,descripcion FROM tipo_documento'; 
-                  $stmt=$db->ejecutar($sql); 
-                  while ($x=$db->obtener_fila($stmt,0)){
-                    echo '<option value="'.$x['id'].'">'.$x['descripcion'].'</option>';
-                  } 
-                  ?>
+$sql  = 'SELECT id,descripcion FROM tipo_documento';
+$stmt = $db->ejecutar($sql);
+while ($x = $db->obtener_fila($stmt, 0)) {
+    echo '<option value="' . $x['id'] . '">' . $x['descripcion'] . '</option>';
+}
+?>
               </select></td>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Numero:</font></label></td>
               <td ><input name="DPI" type="text" class="form-control" placeholder="Numero"></td>
+            </tr>
+              <tr>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Nombres:</font></label></td>
+              <td colspan="3"><input name="Nombre" type="text" class="form-control" placeholder="Nombres"></td>
             </tr>
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Primer Apellido:</font></label></td>
@@ -76,8 +82,14 @@
               <td colspan="3"><input name="segundo_apellido" type="text" class="form-control" placeholder="Segundo Apellido"></td>
             </tr>
             <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Nombres:</font></label></td>
-              <td colspan="3"><input name="Nombre" type="text" class="form-control" placeholder="Nombres"></td>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">RFID:</font></label></td>
+              <td colspan="4"><input type="text" class="form-control" name="RFID" placeholder="RFID"></td>
+            </tr>
+ <tr>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Fecha de nacimiento:</font></label></td>
+              <td colspan="2"><input type="text" class="form-control" name="fecha_nacimiento" id="datepicker" placeholder="mm/dd/yyyy"></td>
+              <td colspan="2"><input type="text" class="form-control" name="Edad" placeholder="Edad"></td>
+
             </tr>
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Genero:</font></label></td>
@@ -87,28 +99,37 @@
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Sede:</font></label></td>
               <td colspan="3"><select name="Sede" class="form-control"><option>seleccione</option>
                 <?php
-                  $sql='SELECT id,nombre FROM sede'; 
-                  $stmt=$db->ejecutar($sql); 
-                  while ($x=$db->obtener_fila($stmt,0)){
-                    echo '<option value="'.$x['id'].'">'.$x['nombre'].'</option>';
-                  } 
-                  ?>
+$sql  = 'SELECT id,nombre FROM sede';
+$stmt = $db->ejecutar($sql);
+while ($x = $db->obtener_fila($stmt, 0)) {
+    echo '<option value="' . $x['id'] . '">' . $x['nombre'] . '</option>';
+}
+?>
               </select></td>
+                 <tr>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Telefono:</font></label></td>
+              <td colspan="4"><input type="text" class="form-control" name="telefono" placeholder="Telefono"></td>
             </tr>
-            <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">El que certifica declara:</font></label></td>
-              <td colspan="3"><select name="certifica_declara" class="form-control"><option>seleccione</option><option>prueba</option></select></td>
+              <tr>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Direccion:</font></label></td>
+              <td colspan="5"><textarea type="text" row="5" name="Direccion" class="form-control" placeholder="Direccion"></textarea> </td>
             </tr>
-          </table>
+            </tr>
+     </table>
         </fieldset>
-        <div class="row">
-          <button type="button"  onclick="Limpiar()" class="btn btn-danger">Limpiar <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
-          <button type="button" onclick=" location.href='neonato.php'" class="btn btn-primary">Atras <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></button>
-          <button type="submit" class="btn btn-success">Guardar <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span></button>
-      </div>
 
-      
+ <div class="form-group">
+           <div class="col-md-12 text-center">
+           <button type="button"  onclick="Limpiar()" class="btn btn-danger">Limpiar <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+          <button type="button" onclick=" location.href='administrador.php'" class="btn btn-primary">Atras <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></button>
+          <button type="submit" class="btn btn-success">Guardar <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span></button>
+
+         </div>
+         </div>
+
+</div>
       </form>
+
 
     </div> <!-- /container -->
 
@@ -119,9 +140,23 @@
     <script src="../docs/assets/js/vendor/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../docs/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../js/jquery-ui/jquery-ui.min.js"></script>
     <script src="../js/jquery-ui/jquery-ui.js"></script>
     <script src="../js/jaquery-ui/external/jquery/jquery.js"></script>
-    <script src="../js/bootstrap-multiselect.js"></script>
+    <script>
+      $( function() {
+    $( "#datepicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true
+    });
+  } );
+       $( function() {
+    $( "#datepicker2" ).datepicker({
+      changeMonth: true,
+      changeYear: true
+    });
+  } );
+    </script>
     <script>
       function Limpiar() {
         document.getElementById("formulario").reset();

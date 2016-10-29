@@ -1,9 +1,8 @@
 <?php
-
 require '../DataBase/db.class.php';
 require '../DataBase/Conf.class.php';
+
 $db = Db::getInstance();
-include '../DataBase/session.php';
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +16,7 @@ include '../DataBase/session.php';
     <meta name="author" content="">
     <link rel="icon" href="../favicon.ico">
 
-    <title>Home</title>
+    <title>Administrador</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../docs/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -27,6 +26,7 @@ include '../DataBase/session.php';
 
     <!-- Custom styles for this template -->
     <link href="../docs/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../js/jquery-ui/jquery-ui.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -42,49 +42,11 @@ include '../DataBase/session.php';
   <body>
 
     <div class="container">
-      <div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="active"><a href="home.php">Inicio</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perfil <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                <li><a href="../DataBase/logout.php">Cerrar Sesion</a></li>
-                 </ul>
-              </li>
-          </ul>
-        </nav>
-        <h3 class="text-muted">Hospital</h3>
-      </div>
+      <?php require 'include/headerad.class.php';?>
+      <form method="POST" action="" id="formulario">
+      </form>
 
-      <div class="well">
-
-      <div class="page-header">
-        <h1>Modulo De Ingreso De Paciente</h1>
-        <p>
-          <a href="madre.php" class="btn btn-primary"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Registrar Certificado</a>
-         </p>
-      </div>
-      <div class="page-header">
-        <h1>Alta Pacientes </h1>
-        <p>
-          <a href="" class="btn btn-primary"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Registrar Certificado</a>
-       </p>
-      </div>
-      <div class="page-header">
-      <h1>Modulo de consultas</h1>
-        <p>
-          <a href="consulta-de-certificado.php" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Consultas de Certificado</a>
-        </p>
-      </div>
-      <div class="page-header">
-        <h1>Modulo de reportes</h1>
-        <p>
-          <a href="reportes.php" class="btn btn-primary"><span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> Reporte de Certificados</a>
-        </p>
-      </div>
-
-    </div>
+    </div> <!-- /container -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../docs/assets/js/vendor/jquery.min.js"><\/script>')</script>
@@ -93,5 +55,27 @@ include '../DataBase/session.php';
     <script src="../docs/assets/js/vendor/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../docs/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../js/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../js/jquery-ui/jquery-ui.js"></script>
+    <script src="../js/jaquery-ui/external/jquery/jquery.js"></script>
+    <script>
+      $( function() {
+    $( "#datepicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true
+    });
+  } );
+       $( function() {
+    $( "#datepicker2" ).datepicker({
+      changeMonth: true,
+      changeYear: true
+    });
+  } );
+    </script>
+    <script>
+      function Limpiar() {
+        document.getElementById("formulario").reset();
+      }
+</script>
   </body>
 </html>
