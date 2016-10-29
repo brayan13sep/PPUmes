@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         header("location: madre.php");
     } else {
-        $error = "Your Login Name or Password is invalid";
+        $error = "Su usuario o contraseña no son validos por favor intentar de nuevo";
     }
 }
 ?>

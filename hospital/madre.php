@@ -79,7 +79,7 @@ $db = Db::getInstance();
             </tr>
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Fecha de nacimiento:</font></label></td>
-              <td colspan="3"><input type="text" class="form-control" name="fecha_nacimiento" id="datepicker" placeholder="mm/dd/yyyy"></td>
+              <td colspan="3"><input type="text" class="form-control" name="fecha_nacimiento" id="datepicker" placeholder="yyyy/mm/dd"></td>
               <td colspan="2"><input type="text" class="form-control" name="Edad" placeholder="Edad"></td>
 
             </tr>
