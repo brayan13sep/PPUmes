@@ -11,7 +11,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $myusuario  = $_POST['usuario'];
     $mypassword = $_POST['password'];
 
-    $sql    = "SELECT id FROM usuario WHERE usuario = '$myusuario' and password = '$mypassword'";
+    $sql = "
+    SELECT  usuario.ID
+    FROM  usuario WHERE usuario.usuario = '$myusuario' and usuario.password = '$mypassword'";
     $result = $db->ejecutar($sql);
 
     $count = mysql_num_rows($result);
@@ -22,8 +24,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         //session_register($myusuario);
         //session_register("myusuario");
         $_SESSION['login_user'] = $myusuario;
-
-        header("location: madre.php");
+       if ($myusuario=="admin") {
+           header("location: agrega-usuario.php");
+       }else if($myusuario=="enfermero"){
+            header("location: madre.php");
+       }else if($myusuario=="director"){
+            header("location: reportes.php");
+       }else if($myusuario=="dba"){
+            header("location: home.php");
+       }else if($myusuario=="monitoreo"){
+            header("location: monitoreo.php");
+       }
     } else {
         $error = "Su usuario o contraseña no son validos por favor intentar de nuevo";
     }
@@ -47,11 +58,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="../docs/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="../docs/assets/js/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
