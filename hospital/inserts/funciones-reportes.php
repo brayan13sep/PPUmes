@@ -18,6 +18,25 @@ function imprimir($sede, $tipo_reporte, $fecha_inicio, $fecha_fin)
               <td> Sede</td>
               <td> Fecha de nacimiento</td>
             </tr>
+            <tr>
+            	<td> </td>
+            </tr>
+          </table> ';
+		
+	}else 
+	if ($tipo_reporte== "Enfermedades Registradas") {
+		echo 
+		'
+          <legend>Modulo de consultas</legend>
+          <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <tr>
+              <td> Genero</td>
+              <td> RFID TAG</td>
+              <td> Peso</td>
+              <td> Sede</td>
+              <td> Fecha de nacimiento</td>
+              <td> Enfermedades</td>
+            </tr>
             
           </table> ';
 		

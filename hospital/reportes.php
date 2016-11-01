@@ -58,33 +58,44 @@ include '../DataBase/session.php';
       <div class="well well-lg">
 
       <form method="POST" action="">
-        <fieldset>
-          <legend>Modulo de consultas</legend>
-          <table class="table table-bordered">
-            <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Sede:</font></label></td>
-              <td colspan="1"><select name="sede" class="form-control"><option>seleccione</option><option value="Hospital de Amatitlan">Hospital de Amatitlan</option></select></td>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de reporte:</font></label></td>
-              <td colspan="1"><select name="tipo_reporte" class="form-control"><option>seleccione</option><option name="No. Neonatos nacidos">No. Neonatos nacidos</option><option name="enfermedades_registradas">Enfermedades Registradas</option><option name="Edad de madres">Edad de madres</option></select></td>
-            </tr>
-            <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Fecha inicio:</font></label></td>
-              <td><input type="text" class="form-control" name="fecha_inicio" id="datepicker" placeholder="yyyy/mm/dd"></td>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Fecha fin:</font></label></td>
-              <td><input type="text" class="form-control" name="fecha_fin" id="datepicker2" placeholder="yyyy/mm/dd"></td>
-            </tr>
-          </table>
-        </fieldset>
- <div class="form-group">
-           <div class="col-md-12 text-center">
-                <div class="row">
-
- <button type="button" class="btn btn-danger">Limpiar <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
-          <button type="submit" class="btn btn-success">Generar Reporte <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                            </div>
-                        </div>
-                        </div>
-      </form>
+  <fieldset>
+    <legend>Modulo de consultas</legend>
+    <table class="table table-bordered">
+      <tr>
+        <td bgcolor="#0D47A1"><label><font color="#FFFFF">Sede:</font></label></td>
+        <td colspan="1">
+          <select name="sede" class="form-control">
+            <option>seleccione</option>
+            <option value="Hospital de Amatitlan">Hospital de Amatitlan</option>
+          </select>
+        </td>
+        <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de reporte:</font></label></td>
+        <td colspan="1">
+          <select name="tipo_reporte" class="form-control">
+            <option>seleccione</option>
+            <option name="No. Neonatos nacidos">No. Neonatos nacidos</option>
+            <option name="enfermedades_registradas">Enfermedades Registradas</option>
+            <option name="Edad de madres">Edad de madres</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td bgcolor="#0D47A1"><label><font color="#FFFFF">Fecha inicio:</font></label></td>
+        <td><input type="text" class="form-control" name="fecha_inicio" id="datepicker" placeholder="yyyy/mm/dd"></td>
+        <td bgcolor="#0D47A1"><label><font color="#FFFFF">Fecha fin:</font></label></td>
+        <td><input type="text" class="form-control" name="fecha_fin" id="datepicker2" placeholder="yyyy/mm/dd"></td>
+      </tr>
+    </table>
+  </fieldset>
+  <div class="form-group">
+    <div class="col-md-12 text-center">
+      <div class="row">
+        <button type="button" class="btn btn-danger">Limpiar <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+        <button type="submit" class="btn btn-success">Generar Reporte <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+      </div>
+    </div>
+  </div>
+</form>
 
 </div>
 <div class="well well-lg">
