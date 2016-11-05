@@ -41,16 +41,16 @@ $db = Db::getInstance();
   <body>
 
     <div class="container">
-      <?php require 'include/header.class.php';?>
-      
+      <?php require 'include/headerdoc.class.php';?>
+
         <fieldset>
-         
+
     <div class="container">
-            
+
         <fieldset>
          <div class="container">
      <div class="well well-lg">
-  
+
       <div class="page-header">
         <h1>Modulo Ingreso</h1>
         <p>
@@ -60,7 +60,7 @@ $db = Db::getInstance();
        <div class="page-header">
         <h1>Modulo Altas</h1>
         <p>
-          <a href="madre.php" class="btn btn-primary"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Registrar Certificado</a>
+          <a href="altas.php" class="btn btn-primary"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Registrar Certificado</a>
 
         </p>
       </div>
@@ -80,10 +80,10 @@ $db = Db::getInstance();
 
 
     </div> <!-- /container -->
- 
+
 </div>
-          
-    
+
+
       </form>
 
     </div> <!-- /container -->

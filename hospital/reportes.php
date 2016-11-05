@@ -1,6 +1,7 @@
 <?php
 include 'inserts/funciones-reportes.php';
 include '../DataBase/session.php';
+
 ?>
 
 
@@ -44,11 +45,11 @@ include '../DataBase/session.php';
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="active"><a href="home.php">Inicio</a></li>
+            
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perfil <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                <li><a href="#">Cerrar Sesion</a></li>
+                <li><a href="../DataBase/logout.php">Cerrar Sesion</a></li>
                  </ul>
               </li>
           </ul>
@@ -58,53 +59,46 @@ include '../DataBase/session.php';
       <div class="well well-lg">
 
       <form method="POST" action="">
-  <fieldset>
-    <legend>Modulo de consultas</legend>
-    <table class="table table-bordered">
-      <tr>
-        <td bgcolor="#0D47A1"><label><font color="#FFFFF">Sede:</font></label></td>
-        <td colspan="1">
-          <select name="sede" class="form-control">
-            <option>seleccione</option>
-            <option value="Hospital de Amatitlan">Hospital de Amatitlan</option>
-          </select>
-        </td>
-        <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de reporte:</font></label></td>
-        <td colspan="1">
-          <select name="tipo_reporte" class="form-control">
-            <option>seleccione</option>
-            <option name="No. Neonatos nacidos">No. Neonatos nacidos</option>
-            <option name="enfermedades_registradas">Enfermedades Registradas</option>
-            <option name="Edad de madres">Edad de madres</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td bgcolor="#0D47A1"><label><font color="#FFFFF">Fecha inicio:</font></label></td>
-        <td><input type="text" class="form-control" name="fecha_inicio" id="datepicker" placeholder="yyyy/mm/dd"></td>
-        <td bgcolor="#0D47A1"><label><font color="#FFFFF">Fecha fin:</font></label></td>
-        <td><input type="text" class="form-control" name="fecha_fin" id="datepicker2" placeholder="yyyy/mm/dd"></td>
-      </tr>
-    </table>
-  </fieldset>
-  <div class="form-group">
-    <div class="col-md-12 text-center">
-      <div class="row">
-        <button type="button" class="btn btn-danger">Limpiar <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
-        <button type="submit" class="btn btn-success">Generar Reporte <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-      </div>
-    </div>
-  </div>
-</form>
+        <fieldset>
+          <legend>Modulo de consultas</legend>
+          <table class="table table-bordered">
+            <tr>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Sede:</font></label></td>
+              <td colspan="1"><select name="sede" class="form-control"><option>seleccione</option><option value="Hospital de Amatitlan">Hospital de Amatitlan</option></select></td>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de reporte:</font></label></td>
+              <td colspan="1"><select name="tipo_reporte" class="form-control"><option>seleccione</option><option name="No. Neonatos nacidos">No. Neonatos nacidos</option><option name="enfermedades_registradas">Enfermedades Registradas</option><option name="Edad de madres">Edad de madres</option></select></td>
+            </tr>
+            <tr>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Fecha inicio:</font></label></td>
+              <td><input type="text" class="form-control" name="fecha_inicio" id="datepicker" placeholder="yyyy/mm/dd"></td>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Fecha fin:</font></label></td>
+              <td><input type="text" class="form-control" name="fecha_fin" id="datepicker2" placeholder="yyyy/mm/dd"></td>
+            </tr>
+          </table>
+        </fieldset>
+ <div class="form-group">
+           <div class="col-md-12 text-center">
+                <div class="row">
+
+ <button type="button" class="btn btn-danger">Limpiar <span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+          <button type="submit" class="btn btn-success">Generar Reporte <span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                            </div>
+                        </div>
+                        </div>
+      </form>
 
 </div>
 <div class="well well-lg">
 
       <?php
-$sede         = $_POST['sede'];
-$tipo_reporte = $_POST['tipo_reporte'];
-$fecha_inicio = $_POST['fecha_inicio'];
-$fecha_fin    = $_POST['fecha_fin'];
+      if(isset($_POST['sede'])){ $sede= $_POST['sede'];} 
+      if(isset($_POST['tipo_reporte'])){ $tipo_reporte = $_POST['tipo_reporte'];} 
+      if(isset($_POST['fecha_inicio'])){ $fecha_inicio = $_POST['fecha_inicio'];} 
+      if(isset($_POST['fecha_fin'])){ $fecha_fin = $_POST['fecha_fin'];} 
+//$sede         = $_POST['sede'];
+//$tipo_reporte = $_POST['tipo_reporte'];
+//$fecha_inicio = $_POST['fecha_inicio'];
+//$fecha_fin    = $_POST['fecha_fin'];
 
 imprimir($sede, $tipo_reporte, $fecha_inicio, $fecha_fin);
 ?>

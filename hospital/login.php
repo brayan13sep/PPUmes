@@ -35,6 +35,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else if ($myusuario == "monitoreo") {
             header("location: monitoreo.php");
         }
+        else if ($myusuario == "medico") {
+            header("location: home.php");
+        }
     } else {
         $error = "Su usuario o contraseña no son validos por favor intentar de nuevo";
     }

@@ -60,7 +60,24 @@ $db = Db::getInstance();
     </tr>
   </thead>
   <tbody>
+<?php
+
+$query  = "select * from mensaje"; // Esta linea hace la consulta
+$result = mysql_query($query);
+
+while ($registro = mysql_fetch_array($result)) {
+    echo "
     <tr>
+       <td >" . $registro['id'] . "</td>
+      <td>" . $registro['nombre'] . "</td>
+      <td >" . $registro['apellido'] . "</td>
+      <td >" . $registro['email'] . "</td>
+
+
+</tr>
+";
+}
+?>    <tr>
       <th scope="row">1</th>
       <td>Mark</td>
       <td>Otto</td>

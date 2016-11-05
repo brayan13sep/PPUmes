@@ -45,7 +45,6 @@ $db = Db::getInstance();
       <div class="header clearfix">
       <nav>
         <ul class="nav nav-pills pull-right">
-          <li role="presentation"><a href="home.php">Inicio</a></li>
                 <li><a href="../DataBase/logout.php">Cerrar Sesion</a></li>
               </ul>
           </li>

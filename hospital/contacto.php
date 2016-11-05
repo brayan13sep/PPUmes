@@ -45,21 +45,21 @@
     <div class="row">
         <div class="col-md-16">
             <div class="well well-sm">
-                <form class="form-horizontal" method="post">
+                <form class="form-horizontal" method="POST" action="inserts/insert-mensaje.php" >
                     <fieldset>
                         <legend class="text-center header">Contacto</legend>
 
                         <div class="form-group">
                          <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon" style="font-size:36px" ></i></span>
                             <div class="col-md-8">
-                                <input id="fname" name="name" type="text" placeholder="Nombre" class="form-control" required>
+                                <input id="nombre" name="nombre" type="text" placeholder="Nombre" class="form-control" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <span class="col-md-1 col-md-offset-2 text-center">
                             <i class="fa fa-user bigicon" style="font-size:36px" ></i></span>
                             <div class="col-md-8">
-                                <input id="lname" name="name" type="text" placeholder="Apellido " class="form-control" required>
+                                <input id="apellido" name="apellido" type="text" placeholder="Apellido " class="form-control" required>
                             </div>
                         </div>
 
@@ -75,7 +75,7 @@
                             <span class="col-md-1 col-md-offset-2 text-center">
                             <i class="fa fa-phone-square bigicon" style="font-size:36px"></i></span>
                             <div class="col-md-8">
-                                <input id="phone" name="phone" type="text" placeholder="telefono " class="form-control" required>
+                                <input id="telefono" name="telefono" type="text" placeholder="telefono " class="form-control" required>
                             </div>
                         </div>
 
@@ -83,12 +83,12 @@
                             <span class="col-md-1 col-md-offset-2 text-center">
                             <i class="fa fa-pencil-square-o bigicon" style="font-size:36px"></i></span>
                             <div class="col-md-8">
-                                <textarea class="form-control" id="message" name="message" placeholder="Introduzca su mensaje para nosotros aquí. Nos pondremos en contacto con usted lo  mas pronto posible ." rows="7"></textarea>
+                                <textarea class="form-control" id="info" name="info" placeholder="Introduzca su mensaje para nosotros aquí. Nos pondremos en contacto lo mas pronto posible ." rows="7"></textarea>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-md-12 text-center">
-                                <button type="" class="btn btn-info "><i class="fa fa-check" aria-hidden="true"></i>   Enviar</button>
+                                <button type="submit"  value="Enviar este formulario"  class="btn btn-info "><i class="fa fa-check" aria-hidden="true"></i>  Enviar</button>
                                 <button type="reset"  class="btn btn-danger"><i class="fa fa-refresh" aria-hidden="true"></i> Limpiar</button>
                                 <button type="button" onclick=" location.href='index.html'" class="btn btn-primary"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Inicio</button>
                             </div>
