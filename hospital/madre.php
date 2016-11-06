@@ -72,10 +72,11 @@ $db = Db::getInstance();
             <tr>
              <td bgcolor="#0D47A1"><label><font color="#FFFFF">RFID:</font></label></td>
              <td colspan="4"><select  name="RFID"><?php
-$sql  = 'SELECT MAX(id) id ,valor FROM valores';
+$sql  = 'SELECT * FROM `valores` ORDER BY id DESC LIMIT 1';
 $stmt = $db->ejecutar($sql);
 while ($x = $db->obtener_fila($stmt, 0)) {
     echo '<option value="' . $x['id'] . '">' . $x['valor'] . '</option>'
+
     ;}
 
 ?></select></td>
@@ -92,10 +93,11 @@ while ($x = $db->obtener_fila($stmt, 0)) {
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Estado civil:</font></label></td>
               <td colspan="5"><select name="estado_civil" class="form-control"><option>Seleccione</option>
               <?php
-$sql  = 'SELECT Max(id) id,valor FROM valores';
+$sql  = 'SELECT id,descripcion FROM estado_civil';
 $stmt = $db->ejecutar($sql);
-echo '<option value="' . $x['id'] . '">' . $x['valor'] . '</option>';
-
+while ($x = $db->obtener_fila($stmt, 0)) {
+    echo '<option value="' . $x['id'] . '">' . $x['descripcion'] . '</option>';
+}
 ?>
 
               </select></td>
