@@ -50,12 +50,12 @@ $db = Db::getInstance();
           <table class="table table-bordered">
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de documento:</font></font></label></td>
-              <td><select name="TipoDocumento" class="form-control"><option>Seleccione</option>
+              <td><select name="tipo_documento" class="form-control"><option>Seleccione</option>
                 <?php
-$sql  = 'SELECT id,descripcion FROM tipo_documento';
+$sql  = 'SELECT ID,descripcion FROM tipo_documento';
 $stmt = $db->ejecutar($sql);
 while ($x = $db->obtener_fila($stmt, 0)) {
-    echo '<option value="' . $x['id'] . '">' . $x['descripcion'] . '</option>';
+    echo '<option value="' . $x['ID'] . '">' . $x['descripcion'] . '</option>';
 }
 ?>
                   </select></td>
@@ -76,7 +76,13 @@ while ($x = $db->obtener_fila($stmt, 0)) {
             </tr>
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">RFID:</font></label></td>
-              <td colspan="4"><input type="text" class="form-control" name="RFID" placeholder="RFID"></td>
+              <td colspan="4"><select  name="RFID"><?php 
+              $sql  = 'SELECT MAX(ID) ID ,RFID FROM RFID';
+$stmt = $db->ejecutar($sql);
+while ($x = $db->obtener_fila($stmt, 0)) {
+    echo '<option value="' . $x['id'] . '">' . $x['RFID'] . '</option>';
+}
+               ?></select></td>
             </tr>
 
 
@@ -90,10 +96,10 @@ while ($x = $db->obtener_fila($stmt, 0)) {
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Estado civil:</font></label></td>
               <td colspan="5"><select name="estado_civil" class="form-control"><option>Seleccione</option>
               <?php
-$sql  = 'SELECT id,descripcion FROM estado_civil';
+$sql  = 'SELECT ID,descripcion FROM estado_civil';
 $stmt = $db->ejecutar($sql);
 while ($x = $db->obtener_fila($stmt, 0)) {
-    echo '<option value="' . $x['id'] . '">' . $x['descripcion'] . '</option>';
+    echo '<option value="' . $x['ID'] . '">' . $x['descripcion'] . '</option>';
 }
 ?>
 
@@ -112,10 +118,10 @@ while ($x = $db->obtener_fila($stmt, 0)) {
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Nivel educativo:</font></font></label></td>
               <td colspan="3"><select name="nivel_educativo" class="form-control"><option>Seleccione</option>
                 <?php
-$sql  = 'SELECT id,descripcion FROM nivel_educativo';
+$sql  = 'SELECT ID,descripcion FROM nivel_educativo';
 $stmt = $db->ejecutar($sql);
 while ($x = $db->obtener_fila($stmt, 0)) {
-    echo '<option value="' . $x['id'] . '">' . $x['descripcion'] . '</option>';
+    echo '<option value="' . $x['ID'] . '">' . $x['descripcion'] . '</option>';
 }
 ?>
 

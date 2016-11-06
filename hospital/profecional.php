@@ -49,7 +49,7 @@ $db = Db::getInstance();
           <table class="table table-bordered">
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Profecion:</font></font></label></td>
-              <td colspan="3"><select name="Profesion" id="select" class="form-control"><option value="obstetra">obstetra</option><option value="medigo general">Medico general</option><option value="otros">Otros</option></select></td>
+              <td colspan="3"><select name="Profesion" id="select" class="form-control"><option value="obstetra">obstetra</option><option value="medi General">Medico general</option><option value="3">Otros</option></select></td>
             </tr>
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">No. colegiatura:</font></label></td>
@@ -59,10 +59,10 @@ $db = Db::getInstance();
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de documento:</font></label></td>
               <td><select name="tipo_documento" class="form-control"><option>Seleccione</option>
                 <?php
-$sql  = 'SELECT id,descripcion FROM tipo_documento';
+$sql  = 'SELECT ID,descripcion FROM tipo_documento';
 $stmt = $db->ejecutar($sql);
 while ($x = $db->obtener_fila($stmt, 0)) {
-    echo '<option value="' . $x['id'] . '">' . $x['descripcion'] . '</option>';
+    echo '<option value="' . $x['ID'] . '">' . $x['descripcion'] . '</option>';
 }
 ?>
               </select></td>
@@ -81,39 +81,23 @@ while ($x = $db->obtener_fila($stmt, 0)) {
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Segundo Apellido:</font></label></td>
               <td colspan="3"><input name="segundo_apellido" type="text" class="form-control" placeholder="Segundo Apellido"></td>
             </tr>
-            <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">RFID:</font></label></td>
-              <td colspan="4"><input type="text" class="form-control" name="RFID" placeholder="RFID"></td>
-            </tr>
- <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Fecha de nacimiento:</font></label></td>
-              <td colspan="2"><input type="text" class="form-control" name="fecha_nacimiento" id="datepicker" placeholder="mm/dd/yyyy"></td>
-              <td colspan="2"><input type="text" class="form-control" name="Edad" placeholder="Edad"></td>
 
-            </tr>
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Genero:</font></label></td>
-              <td colspan="3"><select name="Genero" class="form-control"><option>seleccione</option><option>Masculino</option><option>Femenino</option></select></td>
+              <td colspan="3"><select name="Genero" class="form-control"><option>seleccione</option><option value="Masculino">Masculino</option><option value="Femenino">Femenino</option></select></td>
             </tr>
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Sede:</font></label></td>
               <td colspan="3"><select name="Sede" class="form-control"><option>seleccione</option>
                 <?php
-$sql  = 'SELECT id,nombre FROM sede';
+$sql  = 'SELECT ID,nombre FROM sede';
 $stmt = $db->ejecutar($sql);
 while ($x = $db->obtener_fila($stmt, 0)) {
-    echo '<option value="' . $x['id'] . '">' . $x['nombre'] . '</option>';
+    echo '<option value="' . $x['ID'] . '">' . $x['nombre'] . '</option>';
 }
 ?>
               </select></td>
-                 <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Telefono:</font></label></td>
-              <td colspan="4"><input type="text" class="form-control" name="telefono" placeholder="Telefono"></td>
-            </tr>
-              <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Direccion:</font></label></td>
-              <td colspan="5"><textarea type="text" row="5" name="Direccion" class="form-control" placeholder="Direccion"></textarea> </td>
-            </tr>
+
             </tr>
      </table>
         </fieldset>

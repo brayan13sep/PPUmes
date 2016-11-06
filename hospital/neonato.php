@@ -49,7 +49,7 @@ $db = Db::getInstance();
           <table class="table table-bordered">
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Genero:</font></font></label></td>
-              <td><select name="Genero" class="form-control"><option>Seleccione Genero</option><option value="Masculino">Masculino</option><option value="Femenino">Femenino</option></select></td>
+              <td><select name="Genero" class="form-control"><option>Seleccione Genero</option><option value="1">Masculino</option><option value="2">Femenino</option></select></td>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Peso:</font></label></td>
               <td ><input name="Peso" type="text" class="form-control" placeholder="gr."></td>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Talla:</font></label></td>
@@ -87,11 +87,17 @@ while ($x = $db->obtener_fila($stmt, 0)) {
           </table>
         </fieldset>
         <fieldset>
-  <legend>Profecional Que Atendio El Parto </legend>
+  <legend>Profesional Que Atendio El Parto </legend>
   <table class="table table-bordered">
             <tr>
            <td bgcolor="#0D47A1"><label><font color="#FFFFF">Profecion:</font></font></label></td>
-              <td colspan="3"><select name="Profesion" id="select" class="form-control"><option value="obstetra">obstetra</option><option value="medigo general">Medico general</option><option value="otros">Otros</option></select></td>
+              <td colspan="3">
+              <select name="Profesion" id="select" class="form-control">
+              <option value="1">obstetra</option>
+              <option value="2">Medico general</option>
+              <option value="3">Otros</option>
+              </select>
+              </td>
             </tr>
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">No. colegiatura:</font></label></td>
@@ -109,10 +115,10 @@ while ($x = $db->obtener_fila($stmt, 0)) {
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de parto:</font></label></td>
               <td><select name="tipo_parto" class="form-control"><option>Seleccione</option>
                 <?php
-$sql  = 'SELECT id,descripcion FROM tipo_parto';
+$sql  = 'SELECT ID,descripcion FROM tipo_parto';
 $stmt = $db->ejecutar($sql);
 while ($x = $db->obtener_fila($stmt, 0)) {
-    echo '<option value="' . $x['id'] . '">' . $x['descripcion'] . '</option>';
+    echo '<option value="' . $x['ID'] . '">' . $x['descripcion'] . '</option>';
 }
 ?>
               </select></td>
@@ -121,10 +127,10 @@ while ($x = $db->obtener_fila($stmt, 0)) {
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Condicion del parto:</font></font></label></td>
               <td><select name="condicion_parto" class="form-control"><option>Seleccione</option>
                 <?php
-$sql  = 'SELECT id,descripcion FROM condicion_parto';
+$sql  = 'SELECT ID,descripcion FROM condicion_parto';
 $stmt = $db->ejecutar($sql);
 while ($x = $db->obtener_fila($stmt, 0)) {
-    echo '<option value="' . $x['id'] . '">' . $x['descripcion'] . '</option>';
+    echo '<option value="' . $x['ID'] . '">' . $x['descripcion'] . '</option>';
 }
 ?>
               </select></td>
@@ -133,13 +139,13 @@ while ($x = $db->obtener_fila($stmt, 0)) {
             </tr>
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Malformacion congenita evidente:</font></font></label></td>
-              <td><select name="malformacion_congenita" class="form-control"><option>Seleccione</option><option>SI</option><option>NO</option></select></td>
+              <td><select name="malformacion_congenita" class="form-control"><option>Seleccione</option><option value="1">SI</option><option value="2">NO</option></select></td>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Lactancia precoz:</font></font></label></td>
-              <td><select name="lactancia_precoz" class="form-control"><option>Seleccione</option><option>SI</option><option>NO</option></select></td>
+              <td><select name="lactancia_precoz" class="form-control"><option>Seleccione</option><option value="1">SI</option><option value="2">NO</option></select></td>
             </tr>
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tiempo de ligadura y corde del cordon umbilical:</font></font></label></td>
-              <td colspan="4"><select name="tipo_de_ligadura_y_corte_del_cordon" class="form-control"><option>Seleccione</option><option>Inmediato</option><option>2 A 3 min</option></select></td>
+              <td colspan="4"><select name="tipo_de_ligadura_y_corte_del_cordon" class="form-control"><option>Seleccione</option><option value="1">Inmediato</option><option>2 A 3 min</option></select></td>
             </tr>
           </table>
         </fieldset>
