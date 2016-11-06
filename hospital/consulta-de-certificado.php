@@ -51,7 +51,11 @@ include '../DataBase/session.php';
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perfil <span class="caret"></span></a>
                 <ul class="dropdown-menu">
+<<<<<<< HEAD
                 <li><a href="#">Cerrar Sesión</a></li>
+=======
+                <li><a href="../DataBase/logout.php">Cerrar Sesion</a></li>
+>>>>>>> 7d81aa9f3a32383973ecbc5ccaadd45fbd1e431b
                  </ul>
               </li>
           </ul>
