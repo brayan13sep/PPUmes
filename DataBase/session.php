@@ -1,8 +1,9 @@
 <?php
 	$db=Db::getInstance();
-
-   session_start();
-   
+if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
    $user_check = $_SESSION['login_user'];
    
    $sql = "SELECT id FROM usuario WHERE usuario = '$user_check'";

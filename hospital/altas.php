@@ -1,7 +1,7 @@
 <?php
 require '../DataBase/db.class.php';
 require '../DataBase/Conf.class.php';
-require '../DataBase/session.php';
+include '../DataBase/session.php';
 
 ?>
 <!DOCTYPE html>
