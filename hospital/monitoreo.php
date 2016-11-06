@@ -66,23 +66,33 @@ $db = Db::getInstance();
                   } 
 
              ?>
-             <td class="success"><span class="glyphicon glyphicon-baby-formula">  </span></td>
+             
             </tr>
           </table>
           <table class="table table-bordered">
         <tr colspan="8" align="center"><strong> Area de camas </strong></tr>
             <!-- Aplicadas en las celdas (<td> o <th>) -->
-            <tr>
+            
             <?php 
                  $sql='SELECT estado_incubadora FROM incubadora'; 
                   $stmt=$db->ejecutar($sql); 
-                  while ($x=$db->obtener_fila($stmt,0)){
-                    echo '<td class="'.$x['estado_incubadora'].'"><span class="glyphicon glyphicon-baby-formula">  </span></td>';
+                  
+                  $y;
+                  $j=0;
+                  while ($x=$db->obtener_fila($stmt,0)){             
+                    
+                      foreach ($x as $y) {
+                         echo '<tr>';
+                        echo '<td class="'.$y.'"><span class="glyphicon glyphicon-baby-formula">  </span></td>';
+                        echo '</tr>';
+                      }
+                      $j=$j+1;
                   } 
 
+
              ?>
-             <td class="success"><span class="glyphicon glyphicon-baby-formula">  </span></td>
-            </tr>
+             
+            
           </table>
 
 

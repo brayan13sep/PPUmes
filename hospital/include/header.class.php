@@ -23,6 +23,7 @@ include '../DataBase/session.php';
         <ul class="nav nav-pills pull-right">
           <li role="presentation" class=""><a href="madre.php">Madre</a></li>
           <li role="presentation" class=""><a href="neonato.php">Neonato</a></li>
+          <li role="presentation" class=""><a href="profecional.php">Neonato</a></li>
            <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perfil <span class="caret"></span></a>
               <ul class="dropdown-menu">
