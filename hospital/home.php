@@ -65,13 +65,13 @@ $db = Db::getInstance();
         </p>
       </div>
       <div class="page-header">
-        <h1>Modulo de consultas</h1>
+        <h1>Modulo Consultas</h1>
         <p>
           <a href="consulta-de-certificado.php" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Consultas de Certificado</a>
         </p>
       </div>
       <div class="page-header">
-        <h1>Modulo de reportes</h1>
+        <h1>Modulo Reportes</h1>
         <p>
           <a href="reportes.php" class="btn btn-primary"><span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> Reporte de Certificados</a>
         </p>
