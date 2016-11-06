@@ -81,12 +81,9 @@ $db = Db::getInstance();
                   $j=0;
                   while ($x=$db->obtener_fila($stmt,0)){             
                     
-                      foreach ($x as $y) {
-                         echo '<tr>';
-                        echo '<td class="'.$y.'"><span class="glyphicon glyphicon-baby-formula">  </span></td>';
+                        echo '<tr>';
+                        echo '<td class="'.$x['estado_incubadora'].'"><span class="glyphicon glyphicon-baby-formula">  </span></td>';
                         echo '</tr>';
-                      }
-                      $j=$j+1;
                   } 
 
 
