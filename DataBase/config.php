@@ -5,6 +5,6 @@ $host = 'localhost';
 //Usuario
 $user = 'root';
 //Password
-$password = '';
+$password = 'root';
 //Base de datos a utilizar
 $db = 'hospital';

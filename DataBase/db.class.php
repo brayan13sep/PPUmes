@@ -47,15 +47,15 @@ class Db
     /*Realiza la conexión a la base de datos.*/
     private function conectar()
     {
-        $this->link = mysqli_connect($this->servidor, $this->usuario, $this->password);
-        mysqli_select_db($this->link, $this->base_datos);
-        @mysqli_query("SET NAMES 'utf8'");
+        $this->link = mysql_connect($this->servidor, $this->usuario, $this->password);
+        mysql_select_db($this->base_datos,$this->link);
+        @mysql_query("SET NAMES 'utf8'");
     }
 
     /*Método para ejecutar una sentencia sql*/
     public function ejecutar($sql)
     {
-        $this->stmt = mysqli_query($this->link, $sql);
+        $this->stmt = mysql_query($sql,$this->link);
         return $this->stmt;
     }
 
@@ -63,10 +63,10 @@ class Db
     public function obtener_fila($stmt, $fila)
     {
         if ($fila == 0) {
-            $this->array = mysqli_fetch_array($stmt);
+            $this->array = mysql_fetch_array($stmt);
         } else {
             mysql_data_seek($stmt, $fila);
-            $this->array = mysqli_fetch_array($stmt);
+            $this->array = mysql_fetch_array($stmt);
         }
         return $this->array;
     }
@@ -74,7 +74,7 @@ class Db
     //Devuelve el último id del insert introducido
     public function lastID()
     {
-        return mysqli_insert_id($this->link);
+        return mysql_insert_id($this->link);
     }
 
 }
