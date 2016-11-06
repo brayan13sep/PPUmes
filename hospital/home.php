@@ -65,7 +65,7 @@ $db = Db::getInstance();
         </p>
       </div>
       <div class="page-header">
-        <h1>Modulo de consultas</h1>
+        <h1>A ver que pumas sucede</h1>
         <p>
           <a href="consulta-de-certificado.php" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Consultas de Certificado</a>
         </p>
