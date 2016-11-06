@@ -2,7 +2,7 @@
 <?php
 require '../DataBase/db.class.php';
 require '../DataBase/Conf.class.php';
-
+include '../DataBase/session.php';
 $db = Db::getInstance();
 ?>
 <html lang="en">

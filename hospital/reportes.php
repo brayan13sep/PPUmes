@@ -1,7 +1,7 @@
 <?php
 include 'inserts/funciones-reportes.php';
 include '../DataBase/session.php';
-
+include '../DataBase/session.php';
 ?>
 
 

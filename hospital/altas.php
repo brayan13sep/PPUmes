@@ -1,9 +1,10 @@
-<!DOCTYPE html>
 <?php
 require '../DataBase/db.class.php';
 require '../DataBase/Conf.class.php';
-$db = Db::getInstance();
+require '../DataBase/session.php';
+
 ?>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
