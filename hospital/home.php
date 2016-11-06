@@ -16,7 +16,11 @@ $db = Db::getInstance();
     <link rel="icon" href="../favicon.ico">
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     <title>Administrador</title>
+=======
+    <title>Principal</title>
+>>>>>>> f1effe57665b948b18bbc2c2b3c56101d59da075
 =======
     <title>Principal</title>
 >>>>>>> f1effe57665b948b18bbc2c2b3c56101d59da075

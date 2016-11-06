@@ -51,11 +51,14 @@ $db = Db::getInstance();
           <table class="table table-bordered">
             <tr>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de documento:</font></font></label></td>
               <td><select name="tipo_documento"  id="tipo_documento" class="form-control"><option>Seleccione</option>
               <option  value="1">Dpi</option><option value="2">cedula</option><option value="3">pasaporte</option>
 
 =======
+=======
+>>>>>>> f1effe57665b948b18bbc2c2b3c56101d59da075
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de Documento:</font></font></label></td>
               <td><select name="tipo_documento" class="form-control"><option>Seleccione</option>
                 <?php

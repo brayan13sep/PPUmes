@@ -83,6 +83,7 @@ while ($x = $db->obtener_fila($stmt, 0)) {
               <td colspan="3"><input name="segundo_apellido" type="text" class="form-control" placeholder="Segundo Apellido"></td>
             </tr>
 <<<<<<< HEAD
+<<<<<<< HEAD
              <td bgcolor="#0D47A1"><label><font color="#FFFFF">RFID:</font></label></td>
              <td colspan="4"><?php
 $sql  = 'SELECT * FROM `valores` ORDER BY id DESC LIMIT 1';
@@ -98,6 +99,8 @@ while ($x = $db->obtener_fila($stmt, 0)) {
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Fecha de nacimiento:</font></label></td>
               <td colspan="2"><input type="text" class="form-control" name="fecha_nacimiento" id="datepicker" placeholder="mm/dd/yyyy"></td>
               <td colspan="2"><input type="text" class="form-control" name="Edad" placeholder="Edad"></td>
+=======
+>>>>>>> f1effe57665b948b18bbc2c2b3c56101d59da075
 =======
 >>>>>>> f1effe57665b948b18bbc2c2b3c56101d59da075
 

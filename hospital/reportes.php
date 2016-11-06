@@ -61,7 +61,11 @@ include '../DataBase/session.php';
       <form method="POST" action="">
         <fieldset>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <legend>Modulo De Reportes</legend>
+=======
+          <legend>Modulo Reportes</legend>
+>>>>>>> f1effe57665b948b18bbc2c2b3c56101d59da075
 =======
           <legend>Modulo Reportes</legend>
 >>>>>>> f1effe57665b948b18bbc2c2b3c56101d59da075

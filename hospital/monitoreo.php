@@ -85,6 +85,9 @@ while ($x = $db->obtener_fila($stmt, 0)) {
 
              ?>
              
+<<<<<<< HEAD
+>>>>>>> f1effe57665b948b18bbc2c2b3c56101d59da075
+=======
 >>>>>>> f1effe57665b948b18bbc2c2b3c56101d59da075
             </tr>
           </table>
@@ -94,6 +97,7 @@ while ($x = $db->obtener_fila($stmt, 0)) {
           <table class="table table-bordered">
         <tr colspan="8" align="center"><strong> Area de camas </strong></tr>
             <!-- Aplicadas en las celdas (<td> o <th>) -->
+<<<<<<< HEAD
 <<<<<<< HEAD
             <tr>
             <?php
@@ -108,6 +112,8 @@ while ($x = $db->obtener_fila($stmt, 0)) {
 ?>
             </tr>
 =======
+=======
+>>>>>>> f1effe57665b948b18bbc2c2b3c56101d59da075
             
             <?php 
                  $sql='SELECT estado_incubadora FROM incubadora'; 
@@ -126,6 +132,9 @@ while ($x = $db->obtener_fila($stmt, 0)) {
              ?>
              
             
+<<<<<<< HEAD
+>>>>>>> f1effe57665b948b18bbc2c2b3c56101d59da075
+=======
 >>>>>>> f1effe57665b948b18bbc2c2b3c56101d59da075
           </table>
           </div>
