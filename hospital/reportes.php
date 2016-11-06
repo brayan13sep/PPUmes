@@ -16,7 +16,7 @@ include '../DataBase/session.php';
     <meta name="author" content="">
     <link rel="icon" href="../favicon.ico">
 
-    <title>Consulta de certificado</title>
+    <title>Reportes</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../docs/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -49,7 +49,7 @@ include '../DataBase/session.php';
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perfil <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                <li><a href="../DataBase/logout.php">Cerrar Sesion</a></li>
+                <li><a href="../DataBase/logout.php">Cerrar Sesión</a></li>
                  </ul>
               </li>
           </ul>
@@ -60,18 +60,18 @@ include '../DataBase/session.php';
 
       <form method="POST" action="">
         <fieldset>
-          <legend>Modulo de consultas</legend>
+          <legend>Modulo Reportes</legend>
           <table class="table table-bordered">
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Sede:</font></label></td>
-              <td colspan="1"><select name="sede" class="form-control"><option>seleccione</option><option value="Hospital de Amatitlan">Hospital de Amatitlan</option></select></td>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de reporte:</font></label></td>
-              <td colspan="1"><select name="tipo_reporte" class="form-control"><option>seleccione</option><option name="No. Neonatos nacidos">No. Neonatos nacidos</option><option name="enfermedades_registradas">Enfermedades Registradas</option><option name="Edad de madres">Edad de madres</option></select></td>
+              <td colspan="1"><select name="sede" class="form-control"><option>Seleccione</option><option value="Hospital de Amatitlan">Hospital de Amatitlan</option></select></td>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de Reporte:</font></label></td>
+              <td colspan="1"><select name="tipo_reporte" class="form-control"><option>Seleccione</option><option name="No. Neonatos nacidos">No. Neonatos nacidos</option><option name="enfermedades_registradas">Enfermedades Registradas</option><option name="Edad de madres">Edad de madres</option></select></td>
             </tr>
             <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Fecha inicio:</font></label></td>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Fecha Inicio:</font></label></td>
               <td><input type="text" class="form-control" name="fecha_inicio" id="datepicker" placeholder="yyyy/mm/dd"></td>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Fecha fin:</font></label></td>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Fecha Fin:</font></label></td>
               <td><input type="text" class="form-control" name="fecha_fin" id="datepicker2" placeholder="yyyy/mm/dd"></td>
             </tr>
           </table>

@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     FROM  usuario WHERE usuario.usuario = '$myusuario' and usuario.password = '$mypassword'";
     $result = $db->ejecutar($sql);
 
-    $count = mysql_num_rows($result);
+    $count = mysqli_num_rows($result);
 
     // If result matched $myusuario and $mypassword, table row must be 1 row
 

@@ -47,10 +47,10 @@ $db = Db::getInstance();
       <form method="POST" action="inserts/insert-madre.php" id="formulario">
 
         <fieldset>
-          <legend> Datos de la madre</legend>
+          <legend> Datos de la Madre</legend>
           <table class="table table-bordered">
             <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de documento:</font></font></label></td>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de Documento:</font></font></label></td>
               <td><select name="tipo_documento" class="form-control"><option>Seleccione</option>
                 <?php
 $sql  = 'SELECT ID,descripcion FROM tipo_documento';
@@ -60,8 +60,8 @@ while ($x = $db->obtener_fila($stmt, 0)) {
 }
 ?>
                   </select></td>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Numero:</font></label></td>
-              <td colspan="2"><input type="text" class="form-control" name="DPI" placeholder="Numero"></td>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Número:</font></label></td>
+              <td colspan="2"><input type="text" class="form-control" name="DPI" placeholder="Número"></td>
             </tr>
              <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Nombres:</font></label></td>
@@ -88,13 +88,13 @@ while ($x = $db->obtener_fila($stmt, 0)) {
 
 
             <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Fecha de nacimiento:</font></label></td>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Fecha de Nacimiento:</font></label></td>
               <td colspan="3"><input type="text" class="form-control" name="fecha_nacimiento" id="datepicker" placeholder="yyyy/mm/dd"></td>
               <td colspan="2"><input type="text" class="form-control" name="Edad" placeholder="Edad"></td>
 
             </tr>
             <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Estado civil:</font></label></td>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Estado Civil:</font></label></td>
               <td colspan="5"><select name="estado_civil" class="form-control"><option>Seleccione</option>
               <?php
 $sql  = 'SELECT ID,descripcion FROM estado_civil';
@@ -107,16 +107,16 @@ while ($x = $db->obtener_fila($stmt, 0)) {
               </select></td>
             </tr>
             <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Direccion:</font></label></td>
-              <td colspan="5"><textarea type="text" row="5" name="Direccion" class="form-control" placeholder="Direccion"></textarea> </td>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Dirección:</font></label></td>
+              <td colspan="5"><textarea type="text" row="5" name="Direccion" class="form-control" placeholder="Dirección"></textarea> </td>
             </tr>
           </table>
         </fieldset>
         <fieldset>
-          <legend>Datos adicionales de la madre</legend>
+          <legend>Datos Adicionales de la Madre</legend>
           <table class="table table-bordered">
             <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Nivel educativo:</font></font></label></td>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Nivel Académico:</font></font></label></td>
               <td colspan="3"><select name="nivel_educativo" class="form-control"><option>Seleccione</option>
                 <?php
 $sql  = 'SELECT ID,descripcion FROM nivel_educativo';
@@ -127,23 +127,23 @@ while ($x = $db->obtener_fila($stmt, 0)) {
 ?>
 
               </select></td>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">No. Total de embarazos:</font></label></td>
-              <td ><input type="text" name="total_de_embarazos" class="form-control" placeholder="Numero"></td>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Total de Embarazos:</font></label></td>
+              <td ><input type="text" name="total_de_embarazos" class="form-control" placeholder="Número"></td>
             </tr>
             <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de ocupacion:</font></font></label></td>
-              <td colspan="5"><input type="text" name="tipo_ocupacion" class="form-control" placeholder="Ocupacion"></td>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Ocupación:</font></font></label></td>
+              <td colspan="5"><input type="text" name="tipo_ocupacion" class="form-control" placeholder="Ocupación"></td>
             </tr>
             <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Hijos actualmente vivos:</font></font></label></td>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Hijos Actualmente Vivos:</font></font></label></td>
               <td><input type="text" name="hijos_actualmente_vivos" class="form-control" placeholder="Cantidad"></td>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Hijos nacidos vivos que fallecieron:</font></font></label></td>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Hijos Fallecidos:</font></font></label></td>
               <td><input type="text" name="hijos_nacidos_vivo_que_fallecieron" class="form-control" placeholder="Cantidad"></td>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">No. de abortos y nacidos muertos:</font></font></label></td>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Abortos y Nacidos Fallecidos:</font></font></label></td>
               <td><input type="text" name="abortos_o_nacidos_muertos" class="form-control" placeholder="Cantidad"></td>
             </tr>
             <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Fecha de nacimiento hijo anterior nacido vivo:</font></label></td>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Fecha de Nacimiento Último Hijo:</font></label></td>
               <td colspan="2"><input type="text" class="form-control" name="fecha_nacimiento_ultimo_hijo" id="datepicker2" placeholder="mm/dd/yyyy"></td>
               <td colspan="3"></td>
             </tr>
