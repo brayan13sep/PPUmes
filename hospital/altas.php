@@ -47,14 +47,14 @@ include '../DataBase/session.php';
       <div class="row">
   <div class="col-md-16 col-sm-6">
   <fieldset>
-          <legend> Datos de la madre</legend>
+          <legend> Datos de la Madre</legend>
    <table class="table table-bordered">
         <tr>
         <td bgcolor="#0D47A1"><label><font color="#FFFFF">RFID:</font></label></td>
         <td colspan="4"><input type="text" class="form-control" name="RFID" placeholder="RFID"></td>
       </tr>
       
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Numero DPI:</font></label></td>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Número DPI:</font></label></td>
               
               <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Nombres:</font></label></td>
@@ -78,17 +78,17 @@ include '../DataBase/session.php';
         <td bgcolor="#0D47A1"><label><font color="#FFFFF">RFID:</font></label></td>
         <td colspan="4"><input type="text" class="form-control" name="RFID" placeholder="RFID"></td>
         </tr>
-     <td bgcolor="#0D47A1"><label><font color="#FFFFF">genero</font></label></td>
+     <td bgcolor="#0D47A1"><label><font color="#FFFFF">Género</font></label></td>
               
               <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">fecha y hora nacimiento </font></label></td>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Fecha y Hora Nacimiento </font></label></td>
              
             </tr>
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Peso:</font></label></td>
              </tr>
              <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">:</font></label></td>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Talla:</font></label></td>
              
             </tr>
    </table>
@@ -104,10 +104,10 @@ include '../DataBase/session.php';
         <tr>
         <td bgcolor="#0D47A1"><label><font color="#FFFFF">Nombre</font></label></td>
          </tr>
-     <td bgcolor="#0D47A1"><label><font color="#FFFFF">apellido</font></label></td>
+     <td bgcolor="#0D47A1"><label><font color="#FFFFF">Apellido</font></label></td>
               
               <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Numero colegiado</font></label></td>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Número de Colegiado</font></label></td>
              
             </tr>
            

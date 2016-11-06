@@ -17,7 +17,7 @@ include '../DataBase/session.php';
     <meta name="author" content="">
     <link rel="icon" href="../favicon.ico">
 
-    <title>Consulta de certificado</title>
+    <title>Consulta de Certificado</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../docs/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -51,7 +51,11 @@ include '../DataBase/session.php';
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perfil <span class="caret"></span></a>
                 <ul class="dropdown-menu">
+<<<<<<< HEAD
+                <li><a href="#">Cerrar Sesión</a></li>
+=======
                 <li><a href="../DataBase/logout.php">Cerrar Sesion</a></li>
+>>>>>>> 7d81aa9f3a32383973ecbc5ccaadd45fbd1e431b
                  </ul>
               </li>
           </ul>
@@ -65,14 +69,14 @@ include '../DataBase/session.php';
       <form>
 
         <fieldset>
-          <legend>Modulo De Consultas</legend>
+          <legend>Modulo Consultas</legend>
           <table class="table table-bordered">
             <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de certificado:</font></font></label></td>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de Certificado:</font></font></label></td>
               <td><label><font>CERTIFICADO NACIMIENTO</font></font></label></td>
             </tr>
             <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Numero de certificado:</font></font></label></td>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Número de Certificado:</font></font></label></td>
               <td><input type="text" class="form-control" placeholder="Numero"></td>
             </tr>
              <tr>

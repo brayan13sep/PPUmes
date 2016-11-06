@@ -15,7 +15,7 @@ $db = Db::getInstance();
     <meta name="author" content="">
     <link rel="icon" href="../favicon.ico">
 
-    <title>Madre</title>
+    <title>Principal</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../docs/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -60,18 +60,18 @@ $db = Db::getInstance();
        <div class="page-header">
         <h1>Modulo Altas</h1>
         <p>
-          <a href="altas.php" class="btn btn-primary"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Registrar Certificado</a>
+          <a href="altas.php" class="btn btn-primary"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Registrar Alta</a>
 
         </p>
       </div>
       <div class="page-header">
-        <h1>Modulo de consultas</h1>
+        <h1>Modulo Consultas</h1>
         <p>
           <a href="consulta-de-certificado.php" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Consultas de Certificado</a>
         </p>
       </div>
       <div class="page-header">
-        <h1>Modulo de reportes</h1>
+        <h1>Modulo Reportes</h1>
         <p>
           <a href="reportes.php" class="btn btn-primary"><span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> Reporte de Certificados</a>
         </p>

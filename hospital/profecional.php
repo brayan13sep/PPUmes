@@ -15,7 +15,7 @@ $db = Db::getInstance();
     <meta name="author" content="">
     <link rel="icon" href="../favicon.ico">
 
-    <title>Profecional</title>
+    <title>Profesional</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../docs/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -46,18 +46,18 @@ $db = Db::getInstance();
 
       <form method="POST" action="inserts/insert-profecional.php" id="formulario">
         <fieldset>
-          <legend> Datos del profecional </legend>
+          <legend> Datos del Profesional </legend>
           <table class="table table-bordered">
-            <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Profecion:</font></font></label></td>
-              <td colspan="3"><select name="Profesion" id="select" class="form-control"><option value="obstetra">obstetra</option><option value="medi General">Medico general</option><option value="3">Otros</option></select></td>
+            <tr> 
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Profesión:</font></font></label></td>
+              <td colspan="3"><select name="Profesion" id="select" class="form-control"><option value="obstetra">Obstetra</option><option value="medi General">Medico general</option><option value="3">Otros</option></select></td>
             </tr>
             <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">No. colegiatura:</font></label></td>
-              <td colspan="3"><input name="no_colegiatura" type="text" class="form-control" placeholder="No. colegiatura"></td>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">No. de Colegiado:</font></label></td>
+              <td colspan="3"><input name="no_colegiatura" type="text" class="form-control" placeholder="No. de Colegiado"></td>
             </tr>
             <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de documento:</font></label></td>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de Documento:</font></label></td>
               <td><select name="tipo_documento" class="form-control"><option>Seleccione</option>
                 <?php
 $sql  = 'SELECT ID,descripcion FROM tipo_documento';
@@ -67,8 +67,8 @@ while ($x = $db->obtener_fila($stmt, 0)) {
 }
 ?>
               </select></td>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Numero:</font></label></td>
-              <td ><input name="DPI" type="text" class="form-control" placeholder="Numero"></td>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Número:</font></label></td>
+              <td ><input name="DPI" type="text" class="form-control" placeholder="Número"></td>
             </tr>
               <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Nombres:</font></label></td>
@@ -84,12 +84,12 @@ while ($x = $db->obtener_fila($stmt, 0)) {
             </tr>
 
             <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Genero:</font></label></td>
-              <td colspan="3"><select name="Genero" class="form-control"><option>seleccione</option><option value="Masculino">Masculino</option><option value="Femenino">Femenino</option></select></td>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Género:</font></label></td>
+              <td colspan="3"><select name="Genero" class="form-control"><option>Seleccione</option><option value="Masculino">Masculino</option><option value="Femenino">Femenino</option></select></td>
             </tr>
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Sede:</font></label></td>
-              <td colspan="3"><select name="Sede" class="form-control"><option>seleccione</option>
+              <td colspan="3"><select name="Sede" class="form-control"><option>Seleccione</option>
                 <?php
 $sql  = 'SELECT ID,nombre FROM sede';
 $stmt = $db->ejecutar($sql);
