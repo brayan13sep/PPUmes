@@ -50,15 +50,7 @@ $db = Db::getInstance();
           <legend> Datos de la Madre</legend>
           <table class="table table-bordered">
             <tr>
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de documento:</font></font></label></td>
-              <td><select name="tipo_documento"  id="tipo_documento" class="form-control"><option>Seleccione</option>
-              <option  value="1">Dpi</option><option value="2">cedula</option><option value="3">pasaporte</option>
 
-=======
-=======
->>>>>>> f1effe57665b948b18bbc2c2b3c56101d59da075
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de Documento:</font></font></label></td>
               <td><select name="tipo_documento" class="form-control"><option>Seleccione</option>
                 <?php
@@ -68,7 +60,6 @@ while ($x = $db->obtener_fila($stmt, 0)) {
     echo '<option value="' . $x['ID'] . '">' . $x['descripcion'] . '</option>';
 }
 ?>
->>>>>>> f1effe57665b948b18bbc2c2b3c56101d59da075
                   </select></td>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Número:</font></label></td>
               <td colspan="2"><input type="text" class="form-control" name="DPI" placeholder="Número"></td>
@@ -86,7 +77,6 @@ while ($x = $db->obtener_fila($stmt, 0)) {
               <td colspan="4"><input type="text" class="form-control" name="segundo_apellido" placeholder="Segundo Apellido"></td>
             </tr>
             <tr>
-<<<<<<< HEAD
              <td bgcolor="#0D47A1"><label><font color="#FFFFF">RFID:</font></label></td>
              <td colspan="4"><?php
 $sql  = 'SELECT * FROM `valores` ORDER BY id DESC LIMIT 1';
@@ -103,22 +93,6 @@ while ($x = $db->obtener_fila($stmt, 0)) {
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Fecha de nacimiento:</font></label></td>
               <td colspan="3"><input type="date" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" placeholder="yyyy/mm/dd"></td>
-=======
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">RFID:</font></label></td>
-              <td colspan="4"><select  name="RFID"><?php 
-              $sql  = 'SELECT MAX(ID) ID ,RFID FROM RFID';
-$stmt = $db->ejecutar($sql);
-while ($x = $db->obtener_fila($stmt, 0)) {
-    echo '<option value="' . $x['id'] . '">' . $x['RFID'] . '</option>';
-}
-               ?></select></td>
-            </tr>
-
-
-            <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Fecha de Nacimiento:</font></label></td>
-              <td colspan="3"><input type="text" class="form-control" name="fecha_nacimiento" id="datepicker" placeholder="yyyy/mm/dd"></td>
->>>>>>> f1effe57665b948b18bbc2c2b3c56101d59da075
               <td colspan="2"><input type="text" class="form-control" name="Edad" placeholder="Edad"></td>
 
             </tr>
