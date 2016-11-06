@@ -55,10 +55,17 @@ $db = Db::getInstance();
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Talla:</font></label></td>
               <td ><input name="Talla" type="text" class="form-control" placeholder="cm."></td>
             </tr>
-            <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">RFID:</font></label></td>
-              <td colspan="4"><input type="text" class="form-control" name="RFID" placeholder="RFID"></td>
-            </tr>
+               <td bgcolor="#0D47A1"><label><font color="#FFFFF">RFID:</font></label></td>
+             <td colspan="4"><?php
+$sql  = 'SELECT * FROM `valores` ORDER BY id DESC LIMIT 1';
+$stmt = $db->ejecutar($sql);
+while ($x = $db->obtener_fila($stmt, 0)) {
+    echo '<input class="form-control" type="text" name="rfid" value="' . $x['valor'] . '" readonly="readonly" />'
+
+    ;}
+
+?></td>
+           </tr>
             <tr>
               <td colspan="2"bgcolor="#0D47A1"><label><font color="#FFFFF"></font></font></label></td>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Perimetro cefalico:</font></label></td>

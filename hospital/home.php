@@ -15,7 +15,7 @@ $db = Db::getInstance();
     <meta name="author" content="">
     <link rel="icon" href="../favicon.ico">
 
-    <title>Madre</title>
+    <title>Administrador</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../docs/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -64,6 +64,9 @@ $db = Db::getInstance();
 
         </p>
       </div>
+
+
+      <!--
       <div class="page-header">
         <h1>Modulo de consultas</h1>
         <p>

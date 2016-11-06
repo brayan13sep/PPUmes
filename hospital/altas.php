@@ -48,47 +48,61 @@ $db = Db::getInstance();
   <fieldset>
           <legend> Datos de la madre</legend>
    <table class="table table-bordered">
-        <tr>
-        <td bgcolor="#0D47A1"><label><font color="#FFFFF">RFID:</font></label></td>
-        <td colspan="4"><input type="text" class="form-control" name="RFID" placeholder="RFID"></td>
-      </tr>
-      
+   <td bgcolor="#0D47A1"><label><font color="#FFFFF">RFID:</font></label></td>
+             <td colspan="4"><?php
+$sql  = 'SELECT * FROM `valores` ORDER BY id DESC LIMIT 1';
+$stmt = $db->ejecutar($sql);
+while ($x = $db->obtener_fila($stmt, 0)) {
+    echo '<input class="form-control" type="text" name="rfid" value="' . $x['valor'] . '" readonly="readonly" />'
+
+    ;}
+
+?></td>
+           </tr>
+
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Numero DPI:</font></label></td>
-              
+
               <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Nombres:</font></label></td>
-             
+
             </tr>
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Primer Apellido:</font></label></td>
              </tr>
              <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Segundo Apellido:</font></label></td>
-             
+
             </tr>
    </table>
-         
+
         </fieldset></div>
   <div class="col-md-16 col-sm-6">
   <fieldset>
           <legend>Datos Neonato</legend>
       <table class="table table-bordered">
-        <tr>
-        <td bgcolor="#0D47A1"><label><font color="#FFFFF">RFID:</font></label></td>
-        <td colspan="4"><input type="text" class="form-control" name="RFID" placeholder="RFID"></td>
-        </tr>
+           <td bgcolor="#0D47A1"><label><font color="#FFFFF">RFID:</font></label></td>
+             <td colspan="4"><?php
+$sql  = 'SELECT * FROM `valores` ORDER BY id DESC LIMIT 1';
+$stmt = $db->ejecutar($sql);
+while ($x = $db->obtener_fila($stmt, 0)) {
+    echo '<input class="form-control" type="text" name="rfid" value="' . $x['valor'] . '" readonly="readonly" />'
+
+    ;}
+
+?></td>
+           </tr>
      <td bgcolor="#0D47A1"><label><font color="#FFFFF">genero</font></label></td>
-              
+
               <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">fecha y hora nacimiento </font></label></td>
-             
+
             </tr>
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Peso:</font></label></td>
              </tr>
              <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">:</font></label></td>
-             
+
             </tr>
    </table>
         </fieldset></div>
@@ -104,22 +118,22 @@ $db = Db::getInstance();
         <td bgcolor="#0D47A1"><label><font color="#FFFFF">Nombre</font></label></td>
          </tr>
      <td bgcolor="#0D47A1"><label><font color="#FFFFF">apellido</font></label></td>
-              
+
               <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Numero colegiado</font></label></td>
-             
+
             </tr>
-           
-          
+
+
    </table>
         </fieldset>
-        
+
 
                             </div>
                         </div>
                         </div>
-        
-        
+
+
 
          <div class="form-group">
         <div class="col-md-12 text-center">
@@ -133,7 +147,7 @@ $db = Db::getInstance();
                         </div>
 
 
-      
+
 </div>
 </div>
     </div> <!-- /container -->

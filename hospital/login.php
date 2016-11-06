@@ -25,17 +25,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         //session_register("myusuario");
         $_SESSION['login_user'] = $myusuario;
         if ($myusuario == "admin") {
-            header("location: home.php");
+            header("location: administrador.php");
         } else if ($myusuario == "enfermero") {
-            header("location: madre.php");
+            header("location: admind.php");
         } else if ($myusuario == "director") {
-            header("location: reportes.php");
+            header("location: administrador.php");
         } else if ($myusuario == "dba") {
-            header("location: home.php");
+            header("location: consultasp.php");
         } else if ($myusuario == "monitoreo") {
             header("location: monitoreo.php");
-        }
-        else if ($myusuario == "medico") {
+        } else if ($myusuario == "medico") {
             header("location: home.php");
         }
     } else {

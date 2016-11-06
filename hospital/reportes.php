@@ -45,7 +45,7 @@ include '../DataBase/session.php';
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
-            
+
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perfil <span class="caret"></span></a>
                 <ul class="dropdown-menu">
@@ -60,7 +60,7 @@ include '../DataBase/session.php';
 
       <form method="POST" action="">
         <fieldset>
-          <legend>Modulo de consultas</legend>
+          <legend>Modulo De Reportes</legend>
           <table class="table table-bordered">
             <tr>
               <td bgcolor="#0D47A1"><label><font color="#FFFFF">Sede:</font></label></td>
@@ -91,10 +91,10 @@ include '../DataBase/session.php';
 <div class="well well-lg">
 
       <?php
-      if(isset($_POST['sede'])){ $sede= $_POST['sede'];} 
-      if(isset($_POST['tipo_reporte'])){ $tipo_reporte = $_POST['tipo_reporte'];} 
-      if(isset($_POST['fecha_inicio'])){ $fecha_inicio = $_POST['fecha_inicio'];} 
-      if(isset($_POST['fecha_fin'])){ $fecha_fin = $_POST['fecha_fin'];} 
+if (isset($_POST['sede'])) {$sede = $_POST['sede'];}
+if (isset($_POST['tipo_reporte'])) {$tipo_reporte = $_POST['tipo_reporte'];}
+if (isset($_POST['fecha_inicio'])) {$fecha_inicio = $_POST['fecha_inicio'];}
+if (isset($_POST['fecha_fin'])) {$fecha_fin = $_POST['fecha_fin'];}
 //$sede         = $_POST['sede'];
 //$tipo_reporte = $_POST['tipo_reporte'];
 //$fecha_inicio = $_POST['fecha_inicio'];

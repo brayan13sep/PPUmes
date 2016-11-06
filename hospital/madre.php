@@ -71,15 +71,15 @@ $db = Db::getInstance();
             </tr>
             <tr>
              <td bgcolor="#0D47A1"><label><font color="#FFFFF">RFID:</font></label></td>
-             <td colspan="4"><select  name="RFID"><?php
+             <td colspan="4"><?php
 $sql  = 'SELECT * FROM `valores` ORDER BY id DESC LIMIT 1';
 $stmt = $db->ejecutar($sql);
 while ($x = $db->obtener_fila($stmt, 0)) {
-    echo '<option value="' . $x['id'] . '">' . $x['valor'] . '</option>'
+    echo '<input class="form-control" type="text" name="rfid" value="' . $x['valor'] . '" readonly="readonly" />'
 
     ;}
 
-?></select></td>
+?></td>
            </tr>
 
 

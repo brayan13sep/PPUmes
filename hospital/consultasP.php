@@ -15,7 +15,7 @@ $db = Db::getInstance();
     <meta name="author" content="">
     <link rel="icon" href="../favicon.ico">
 
-    <title>Monitoreo</title>
+    <title>Administrador</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../docs/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -41,65 +41,38 @@ $db = Db::getInstance();
   <body>
 
     <div class="container">
+      <?php require 'include/headerdoc.class.php';?>
 
-      <div class="header clearfix">
-      <nav>
-        <ul class="nav nav-pills pull-right">
-                <li><a href="../DataBase/logout.php">Cerrar Sesion</a></li>
-              </ul>
-          </li>
-        </ul>
-      </nav>
-        <h3 class="text-muted">Hospital</h3>
-    </div>
-      <form>
-<div class="row">
+        <fieldset>
 
+    <div class="container">
 
+        <fieldset>
+         <div class="container">
+     <div class="well well-lg">
 
-
-        <table class="table table-bordered">
-        <tr colspan="8" align="center"><strong> Incubadora neonatal </strong></tr>
-            <!-- Aplicadas en las celdas (<td> o <th>) -->
-            <tr>
-           <?php
-
-# code...
-
-$sql  = 'SELECT estado_incubadora FROM incubadora';
-$stmt = $db->ejecutar($sql);
-while ($x = $db->obtener_fila($stmt, 0)) {
-    echo '<td class="' . $x['estado_incubadora'] . '"><span class="glyphicon glyphicon-baby-formula">  </span></td>';
-
-}
-?>
-
-            </tr>
-          </table>
+     <div class="page-header">
+        <h1>Modulo de consultas</h1>
+        <p>
+          <a href="consulta-de-certificado.php" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Consultas de Certificado</a>
+        </p>
+      </div>
+      <div class="page-header">
+        <h1>Modulo de reportes</h1>
+        <p>
+          <a href="reportes.php" class="btn btn-primary"><span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> Reporte de Certificados</a>
+        </p>
+      </div>
+    </div> <!-- /container -->
 
 
+    </div> <!-- /container -->
 
-          <table class="table table-bordered">
-        <tr colspan="8" align="center"><strong> Area de camas </strong></tr>
-            <!-- Aplicadas en las celdas (<td> o <th>) -->
-            <tr>
-            <?php
-$sql  = 'SELECT estado_incubadora FROM incubadora';
-$stmt = $db->ejecutar($sql);
-
-while ($x = $db->obtener_fila($stmt, 0)) {
-
-    echo '<td class="' . $x['estado_incubadora'] . '"><span class="glyphicon glyphicon-baby-formula">  </span></td>';
-
-}
-?>
-            </tr>
-          </table>
-          </div>
-
+</div>
 
 
       </form>
+
     </div> <!-- /container -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
