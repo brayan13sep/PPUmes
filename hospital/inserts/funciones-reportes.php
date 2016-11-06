@@ -1,14 +1,15 @@
 <?php
-  require '../DataBase/db.class.php';
-    require '../DataBase/Conf.class.php';
-    $db=Db::getInstance();
-  $sede        = null;
-  $tipo_reporte= null;
-  $fecha_inicio= null;
-  $fecha_fin   = null;
+include '../DataBase/db.class.php';
+include '../DataBase/Conf.class.php';
+
+
+
   
   function imprimir($sede, $tipo_reporte, $fecha_inicio, $fecha_fin)
   {
+
+    $db = Db::getInstance();
+
     if ($tipo_reporte== "No. Neonatos nacidos") {
       echo 
       '
@@ -21,8 +22,18 @@
                 <td> Sede</td>
                 <td> Fecha de nacimiento</td>
               </tr>
-              
-            </table> ';
+              ';
+              $sql  = 'SELECT N.genero genero, N.rfid rfid, N.peso peso, S.nombre nombre, N.fecha_nacimiento fecha FROM Neonato N, Sede S WHERE S.id=N.sede AND S.nombre="'.$sede.'" AND N.fecha_nacimiento BETWEEN "'.$fecha_inicio.'" AND '.$fecha_fin.' BY N.genero, N.rfid, N.peso, S.nombre, N.fecha_nacimiento';
+              $stmt = $db->ejecutar($sql);
+
+              while ($x = $db->obtener_fila($stmt,0)) {
+
+              echo '<td>'.$x['genero'].'</td>
+                    <td>'.$x['rfid'].'</td>
+                    <td>'.$x['peso'].'</td>
+                    <td>'.$x['fecha'].'</td>';
+              }
+            echo '</table> ';
       
     }
   }

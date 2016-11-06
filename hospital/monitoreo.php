@@ -2,7 +2,7 @@
 <?php
 require '../DataBase/db.class.php';
 require '../DataBase/Conf.class.php';
-
+include '../DataBase/session.php';
 $db = Db::getInstance();
 ?>
 <html lang="en">
@@ -62,6 +62,7 @@ $db = Db::getInstance();
         <tr colspan="8" align="center"><strong> Incubadora neonatal </strong></tr>
             <!-- Aplicadas en las celdas (<td> o <th>) -->
             <tr>
+<<<<<<< HEAD
            <?php
 
 # code...
@@ -74,6 +75,17 @@ while ($x = $db->obtener_fila($stmt, 0)) {
 }
 ?>
 
+=======
+            <?php 
+                 $sql='SELECT estado_incubadora FROM incubadora'; 
+                  $stmt=$db->ejecutar($sql); 
+                  while ($x=$db->obtener_fila($stmt,0)){
+                    echo '<td class="'.$x['estado_incubadora'].'"><span class="glyphicon glyphicon-baby-formula">  </span></td>';
+                  } 
+
+             ?>
+             
+>>>>>>> f1effe57665b948b18bbc2c2b3c56101d59da075
             </tr>
           </table>
 
@@ -82,6 +94,7 @@ while ($x = $db->obtener_fila($stmt, 0)) {
           <table class="table table-bordered">
         <tr colspan="8" align="center"><strong> Area de camas </strong></tr>
             <!-- Aplicadas en las celdas (<td> o <th>) -->
+<<<<<<< HEAD
             <tr>
             <?php
 $sql  = 'SELECT estado_incubadora FROM incubadora';
@@ -94,6 +107,26 @@ while ($x = $db->obtener_fila($stmt, 0)) {
 }
 ?>
             </tr>
+=======
+            
+            <?php 
+                 $sql='SELECT estado_incubadora FROM incubadora'; 
+                  $stmt=$db->ejecutar($sql); 
+                  
+                  $y;
+                  $j=0;
+                  while ($x=$db->obtener_fila($stmt,0)){             
+                    
+                        echo '<tr>';
+                        echo '<td class="'.$x['estado_incubadora'].'"><span class="glyphicon glyphicon-baby-formula">  </span></td>';
+                        echo '</tr>';
+                  } 
+
+
+             ?>
+             
+            
+>>>>>>> f1effe57665b948b18bbc2c2b3c56101d59da075
           </table>
           </div>
 

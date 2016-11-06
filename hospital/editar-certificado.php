@@ -49,7 +49,7 @@ require '../DataBase/db.class.php';
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Perfil <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                <li><a href="#">Cerrar Sesion</a></li>
+                <li><a href="#">Cerrar Sesión</a></li>
                  </ul>
               </li>
           </ul>
@@ -58,14 +58,14 @@ require '../DataBase/db.class.php';
       </div>
       <form>
         <fieldset>
-          <legend>Modulo de consultas</legend>
+          <legend>Modulo Consultas</legend>
           <table class="table table-bordered">
             <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de certificado:</font></font></label></td>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Tipo de Certificado:</font></font></label></td>
               <td><label><font>CERTIFICADO NACIDO VIVO</font></font></label></td>
             </tr>
             <tr>
-              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Numero de certificado:</font></font></label></td>
+              <td bgcolor="#0D47A1"><label><font color="#FFFFF">Número de Certificado:</font></font></label></td>
               <td><input type="text" class="form-control" placeholder="Numero"></td>
             </tr>
           </table>

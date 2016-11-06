@@ -12,9 +12,9 @@ $Nombre=$_POST['Nombre'];
 $primer_apellido=$_POST['primer_apellido'];
 $segundo_apellido=$_POST['segundo_apellido'];
 $Sede=$_POST['Sede'];
-$certifica_declara=$_POST['certifica_declara'];
+$certifica_declara=$_POST['Profesion'];
 $Genero=$_POST['Genero'];
-
+$fechatimestamp=date('y/m/d H:i');
 /*echo "
 ".$no_colegiatura."
 ,".$tipo_documento."
@@ -27,41 +27,39 @@ $Genero=$_POST['Genero'];
 ,".$Genero."";
 */
 $sql="INSERT INTO profecional (
-no_colegiatura
-,tipo_documento
-,DPI
-,Nombre
-,primer_apellido
-,segundo_apellido
-,Sede
-,certifica_declara
-,Genero
+ `no_colegiatura`, `dpi`, `nombre`, `primer_apellido`, `segundo_apellido`, `genero`, `certifica_declara`, `tipo_documento`, `sede`, `profesion`, `activo`, `timestamp`
 ) VALUES(
 ".$no_colegiatura."
-,'".$tipo_documento."'
 ,".$DPI."
 ,'".$Nombre."'
 ,'".$primer_apellido."'
 ,'".$segundo_apellido."'
-,".$Sede."
-,'".$certifica_declara."'
 ,'".$Genero."'
+,".$certifica_declara."
+,".$tipo_documento."
+,".$Sede."
+,1
+,1
+,'".$fechatimestamp."'
 )";
 
 $stmt=$db->ejecutar($sql);
 
-/*$Profesion=$_POST['Profesion'];
+/*echo "".$no_colegiatura."
+,".$DPI."
+,'".$Nombre."'
+,'".$primer_apellido."'
+,'".$segundo_apellido."'
+,'".$Genero."'
+,'".$certifica_declara."'
+,'".$tipo_documento."'
+,".$Sede."
+,''
+,1
+,1
+,'".$fechatimestamp."'
+" ;
+*/
 
-	for ($i=0;$i<count($Profesion);$i++)    
-	{     
-	if (count($Profesion)==1 or $i==count($Profesion)-1){
-		echo $Profesion[$i] ;
-
-	}else{
-		echo $Profesion[$i].",";
-	}    
-} */
-
-
-header('Location: ../home.php');
+header('Location: ../madre.php');
  ?>
