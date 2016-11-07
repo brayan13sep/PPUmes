@@ -82,6 +82,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <div class="container">
     <div class="row">
         <div class="col-md-8" >
+
+        <div id ="log"></div>
             <div class="well well-sm">
                 <form class="form-horizontal" method="POST" action="">
                     <fieldset>
