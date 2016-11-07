@@ -26,7 +26,7 @@ INSERT INTO madre (
 )
 VALUES (
 " . $DPI . "
-," . $RFID . "
+,'" . $RFID . "'
 ," . $tipo_documento . "
 ,'" . $Nombre . "'
 ,'" . $primer_apellido . "'
@@ -46,6 +46,7 @@ VALUES (
 ,'".$fechatimestamp."'
 )";
 $stmt = $db->ejecutar($sql);
+
 /*
 echo "" . $DPI . "
 ," . $RFID . "
@@ -65,5 +66,6 @@ echo "" . $DPI . "
 ," . $abortos_o_nacidos_muertos . "
 ,'" . $fecha_nacimiento_ultimo_hijo . "'
 ,1
-,'".$fechatimestamp."'*/
-header('Location: ../neonato.php');
+,'".$fechatimestamp."'";
+*/
+//header('Location: ../madre.php');
